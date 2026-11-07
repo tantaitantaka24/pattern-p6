@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เฉลยแบบรูป ป.6</title>
+<meta name="description" content="เฉลยแบบละเอียด เห็นภาพ กดไล่ทีละขั้น แบบฝึกหัด 5.3–5.4 บทที่ 5 แบบรูป คณิตศาสตร์ ป.6 เล่ม 1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&family=Mitr:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf7ee; --card:#fff; --ink:#2b2b2b; --muted:#6b6b6b; --line:#eadfc8;
+  --accent:#f4b400; --accent-d:#c98e00; --brand:#7a3fb0; --red:#e0262f;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:Sarabun,system-ui,sans-serif;font-size:18px;line-height:1.6}
+header{background:#fff;border-bottom:3px solid var(--accent);padding:10px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header h1{font-family:Mitr,Sarabun,sans-serif;font-weight:500;font-size:22px;margin:0;color:var(--brand)}
+header .sub{color:var(--muted);font-size:15px}
+.layout{display:grid;grid-template-columns:270px 1fr;gap:0;min-height:calc(100vh - 60px)}
+nav{background:#fff;border-right:1px solid var(--line);padding:10px 0;overflow:auto;max-height:calc(100vh - 60px);position:sticky;top:0}
+nav h4{margin:14px 16px 4px;font-family:Mitr,sans-serif;font-weight:500;font-size:15px;color:var(--accent-d)}
+nav h5{margin:8px 16px 2px;font-size:14px;color:var(--muted);font-weight:600}
+nav button{display:block;width:100%;text-align:left;background:none;border:0;padding:5px 16px 5px 26px;font:inherit;font-size:16px;color:var(--ink);cursor:pointer;border-left:4px solid transparent}
+nav button:hover{background:#fff6dc}
+nav button.on{background:#fff1c2;border-left-color:var(--accent);font-weight:700}
+nav .tag3d{font-size:11px;background:#7a3fb0;color:#fff;border-radius:6px;padding:0 5px;margin-left:4px;vertical-align:2px}
+#psel{display:none;width:100%;font:inherit;font-size:16px;padding:8px;border-radius:10px;border:1px solid var(--line);background:#fff}
+main{padding:18px 26px 40px;max-width:1100px;width:100%}
+.phead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.badge{background:var(--accent);color:#3b2a00;font-family:Mitr,sans-serif;border-radius:999px;padding:2px 14px;font-size:16px}
+.page{color:var(--muted);font-size:15px}
+#pq{width:100%;font-size:20px;margin:6px 0 10px}
+.chip{display:inline-block;width:.9em;height:.9em;border:1px solid #333;vertical-align:-1px;margin:0 2px}
+.chip.dot{border-radius:50%}
+.tabs{display:flex;gap:6px;margin:6px 0 12px;border-bottom:2px solid var(--line)}
+.tabs button{font:inherit;font-family:Mitr,sans-serif;font-size:17px;padding:6px 16px;border:0;background:none;cursor:pointer;color:var(--muted);border-bottom:4px solid transparent;margin-bottom:-2px}
+.tabs button.on{color:var(--brand);border-bottom-color:var(--brand)}
+.stepbar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.stepbar button{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);background:#fff;font:inherit;font-weight:700;cursor:pointer;color:var(--muted)}
+.stepbar button.done{background:#fff1c2;border-color:var(--accent);color:#6b4d00}
+.stepbar button.on{background:var(--accent);border-color:var(--accent-d);color:#3b2a00}
+h3#stitle{font-family:Mitr,sans-serif;font-weight:500;margin:6px 0 8px;font-size:21px}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;overflow:hidden}
+.stage svg.fig{width:100%;height:auto;display:block}
+svg text{font-family:Sarabun,sans-serif}
+svg .lab{font-size:19px;fill:#333;text-anchor:middle}
+svg .sub{text-anchor:middle;font-weight:700}
+.explain{background:#fffaf0;border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:12px 16px;margin-top:12px;font-size:19px}
+.explain p{margin:.2em 0 .5em}
+.tip{color:#7a5b00}
+.ans{display:inline-block;margin-top:8px;background:#e8f7ee;border:2px solid #18a058;color:#0c6b3a;border-radius:10px;padding:4px 14px;font-weight:700;font-size:21px}
+.formula{font-size:24px;font-weight:700;text-align:center}
+.navbtn{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:10px}
+.navbtn button,.tryctl button{font:inherit;font-family:Mitr,sans-serif;font-size:18px;padding:8px 22px;border-radius:12px;border:0;cursor:pointer;background:var(--brand);color:#fff}
+.navbtn button:disabled{background:#cfc6d8;cursor:default}
+.navbtn #prev{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+.navbtn #prev:disabled{color:#bbb;border-color:#ddd}
+#scount{color:var(--muted);font-size:15px}
+.tryctl{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.tryctl button{width:46px;padding:6px 0;font-size:24px;line-height:1}
+.tryctl input{flex:1;min-width:160px;accent-color:var(--brand);height:30px}
+.tryctl label{font-family:Mitr,sans-serif;font-size:20px;min-width:120px}
+.tryctl b{color:var(--brand);font-size:26px}
+table.tb{border-collapse:collapse;font-size:17px;background:#fff;margin:0 auto}
+.tb th,.tb td{border:1.5px solid #e2a3a6;padding:4px 12px;text-align:center}
+.tb th{background:#fde8e8;color:#9b1c22;font-weight:700}
+.tb tr.hl td{background:#fff1c2;font-weight:700}
+.tbwrap{max-width:100%;overflow:auto}
+.three{position:relative;width:100%;height:400px;border-radius:12px;background:radial-gradient(#ffffff,#f1ebdd);overflow:hidden;touch-action:none}
+.three canvas{display:block}
+.three .tload{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.three .replay{position:absolute;right:10px;bottom:10px;font:inherit;font-size:15px;border:0;border-radius:10px;padding:4px 12px;background:#7a3fb0;color:#fff;cursor:pointer}
+.three .hint{position:absolute;left:12px;bottom:10px;font-size:14px;color:var(--muted)}
+.three .lbl3{position:absolute;left:12px;top:8px;font-size:16px;font-weight:700;color:#555}
+.cards{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.card{background:#fffaf0;border:2px solid var(--line);border-radius:14px;padding:10px 18px;text-align:center;min-width:160px}
+.card b{display:block;font-size:26px;color:var(--brand)}
+footer{color:var(--muted);font-size:14px;padding:16px 26px}
+@media (max-width:820px){
+  body{font-size:17px}
+  .layout{display:block}
+  nav{display:none}
+  #psel{display:block;margin-bottom:10px}
+  main{padding:12px 16px 30px}
+  .three{height:320px}
+  .explain{font-size:17px}
+  .formula{font-size:20px}
+  header h1{font-size:19px}
+}
+</style>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+</script>
+</head>
+<body>
+<header>
+  <h1>เฉลยแบบรูป ป.6 เล่ม 1 · บทที่ 5</h1>
+  <span class="sub">แบบฝึกหัด 5.3–5.4 (หน้า 134–147) · กดไล่ทีละขั้น · ลองรูปที่ n เอง</span>
+</header>
+<div class="layout">
+  <nav id="nav"></nav>
+  <main>
+    <select id="psel" aria-label="เลือกข้อ"></select>
+    <div class="phead"><span class="badge" id="badge"></span><span class="page" id="page"></span></div>
+    <div id="pq"></div>
+    <div class="tabs"><button data-tab="steps" class="on">เฉลยทีละขั้น</button><button data-tab="try" id="trytab">ลองรูปที่ n</button></div>
+    <section id="steps">
+      <div class="stepbar" id="dots"></div>
+      <h3 id="stitle"></h3>
+      <div class="stage" id="stage"></div>
+      <div class="explain" id="explain"></div>
+      <div class="navbtn"><button id="prev">◀ ย้อนกลับ</button><span id="scount"></span><button id="next">ถัดไป ▶</button></div>
+    </section>
+    <section id="try" hidden>
+      <div class="tryctl"><button id="minus" aria-label="ลด">−</button><label><span id="tlabel">รูปที่</span> <b id="nval"></b></label><input type="range" id="nrange"><button id="plus" aria-label="เพิ่ม">+</button></div>
+      <div class="stage" id="tstage"></div>
+      <div class="explain" id="tinfo"></div>
+    </section>
+  </main>
+</div>
+<footer>โจทย์จากแบบฝึกหัดรายวิชาพื้นฐานคณิตศาสตร์ ป.6 เล่ม 1 ของ สสวท. วาดรูปใหม่และอธิบายวิธีคิดตามคู่มือครู · ใช้ลูกศร ← → บนคีย์บอร์ดเพื่อไปขั้นถัดไปได้</footer>
+
+<script type="module">
+/* ============ พื้นฐาน ============ */
+const $=s=>document.querySelector(s);
+const fmt=n=>Number(n).toLocaleString('en-US');
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const C={red:'#e0262f',blue:'#1d5fd1',green:'#0e9a4e',purple:'#8e3fb8',pink:'#d6338a',orange:'#e8730c',ink:'#2b2b2b',teal:'#0a8f9a',gray:'#777',gold:'#b8860b'};
+const F={yellow:'#fcc419',sky:'#4dc0f0',green:'#12a150',pink:'#f06cb8',purple:'#7b44a8',orange:'#f59a4c',lblue:'#86c8ec',brown:'#7b5134',blue:'#1c7fd0',tgreen:'#4cba6a',bpurple:'#cc80c8',hblue:'#97a6dc',horange:'#f58e45',cube:'#8fd16a',caramel:'#d9a24e'};
+const chip=(c,dot)=>`<i class="chip${dot?' dot':''}" style="background:${c}"></i>`;
+const H=segs=>segs.map(([t,c])=>`<span style="color:${c||C.ink}">${esc(t)}</span>`).join('');
+const TS=segs=>segs.map(([t,c])=>`<tspan fill="${c||C.ink}">${esc(t)}</tspan>`).join('');
+const segLen=segs=>segs.reduce((a,[t])=>a+String(t).length,0);
+function shade(hex,f){const n=parseInt(hex.slice(1),16);const ch=[n>>16,n>>8&255,n&255].map(v=>Math.round(f>0?v+(255-v)*f:v*(1+f)));return '#'+ch.map(v=>v.toString(16).padStart(2,'0')).join('')}
+
+/* ============ รูปทรงพื้นฐาน (หน่วยช่อง, แกน y ชี้ลง) ============ */
+const sqU=(x,y,fill,o={})=>({t:'sq',x,y:-y-1,fill,u:1,...o});        // แกน y ชี้ขึ้น
+const outU=(cells,c,sw)=>({t:'out',cells:cells.map(([x,y])=>[x,-y-1]),c,sw});
+const stick=(x1,y1,x2,y2,c)=>({t:'stick',x1,y1,x2,y2,c,u:1});
+const txt=(x,y,v,c,s=.5,a='middle')=>({t:'txt',x,y,v,c,s,a});
+function outPath(cells){const S=new Set(cells.map(([x,y])=>x+','+y)),h=(x,y)=>S.has(x+','+y);let d='';
+  for(const [x,y] of cells){
+    if(!h(x,y-1))d+=`M${x} ${y}H${x+1}`; if(!h(x,y+1))d+=`M${x} ${y+1}H${x+1}`;
+    if(!h(x-1,y))d+=`M${x} ${y}V${y+1}`; if(!h(x+1,y))d+=`M${x+1} ${y}V${y+1}`;}
+  return d}
+function hexPts(cx,cy,r,flat){const p=[];for(let i=0;i<6;i++){const a=Math.PI/180*(flat?60*i:60*i-90);p.push([cx+r*Math.cos(a),cy+r*Math.sin(a)])}return p}
+function bounds(prims){let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;const A=(x,y)=>{if(x<x0)x0=x;if(y<y0)y0=y;if(x>x1)x1=x;if(y>y1)y1=y};
+  for(const p of prims){switch(p.t){
+    case 'sq':A(p.x,p.y);A(p.x+1,p.y+1);break;
+    case 'out':for(const [x,y] of p.cells){A(x,y);A(x+1,y+1)}break;
+    case 'stick':case 'ln':A(p.x1,p.y1);A(p.x2,p.y2);break;
+    case 'dot':case 'circ':case 'ring':{const r=p.r||.13;A(p.x-r,p.y-r);A(p.x+r,p.y+r);break}
+    case 'hex':hexPts(p.cx,p.cy,p.r,p.flat).forEach(([x,y])=>A(x,y));break;
+    case 'poly':p.pts.forEach(([x,y])=>A(x,y));break;
+    case 'ell':A(p.cx-p.rx,p.cy-p.ry);A(p.cx+p.rx,p.cy+p.ry);break;
+    case 'txt':{const w=String(p.v).length*p.s*.32;const xa=p.a==='start'?p.x:p.x-w;A(xa,p.y-p.s/2);A(xa+2*w,p.y+p.s/2);break}
+  }}
+  return {x0,y0,w:Math.max(x1-x0,.01),h:Math.max(y1-y0,.01)}}
+const NS='vector-effect="non-scaling-stroke"';
+function dp(p){switch(p.t){
+  case 'sq':return `<rect x="${p.x}" y="${p.y}" width="1" height="1" fill="${p.fill}" stroke="${p.st||'#2b2b2b'}" stroke-width="${p.sw||1}" ${NS}${p.op!=null?` opacity="${p.op}"`:''}/>`;
+  case 'out':return `<path d="${outPath(p.cells)}" fill="none" stroke="${p.c}" stroke-width="${p.sw||3.5}" stroke-linecap="round" ${NS}/>`;
+  case 'stick':{const k=.07,dx=p.x2-p.x1,dy=p.y2-p.y1,a=[p.x1+dx*k,p.y1+dy*k],b=[p.x2-dx*k,p.y2-dy*k];
+    return `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${p.c||'#d9a35a'}" stroke-width="${p.c?6:5}" stroke-linecap="round" ${NS}/><circle cx="${b[0]}" cy="${b[1]}" r="0.07" fill="#b8332b"/>`}
+  case 'ln':return `<line x1="${p.x1}" y1="${p.y1}" x2="${p.x2}" y2="${p.y2}" stroke="${p.c}" stroke-width="${p.w||2}" ${NS}${p.dash?' stroke-dasharray="5 4"':''}/>`;
+  case 'dot':return `<circle cx="${p.x}" cy="${p.y}" r="${p.r||.13}" fill="${p.c||'#12a150'}"/>`;
+  case 'circ':return `<circle cx="${p.x}" cy="${p.y}" r="${p.r}" fill="${p.fill}" stroke="#222" stroke-width="1" ${NS}/>`;
+  case 'ring':return `<circle cx="${p.x}" cy="${p.y}" r="${p.r}" fill="none" stroke="${p.c}" stroke-width="3.5" ${NS}/>`;
+  case 'hex':return `<polygon points="${hexPts(p.cx,p.cy,p.r,p.flat).map(q=>q.join(',')).join(' ')}" fill="${p.fill}" stroke="${p.st||'#2b2b2b'}" stroke-width="${p.sw||1}" stroke-linejoin="round" ${NS}/>`;
+  case 'poly':return `<polygon points="${p.pts.map(q=>q.join(',')).join(' ')}" fill="${p.fill}" stroke="${p.st||'#2d2d2d'}" stroke-width="${p.sw||1}" stroke-linejoin="round" ${NS}${p.op!=null?` opacity="${p.op}"`:''}/>`;
+  case 'ell':return `<ellipse cx="${p.cx}" cy="${p.cy}" rx="${p.rx}" ry="${p.ry}" fill="none" stroke="${p.c}" stroke-width="2.5" ${NS}/>`;
+  case 'txt':return `<text x="${p.x}" y="${p.y}" font-size="${p.s}" fill="${p.c||C.ink}" text-anchor="${p.a||'middle'}" dominant-baseline="central" font-weight="700">${esc(p.v)}</text>`;
+}return ''}
+const order={sq:0,poly:0,hex:0,circ:0,ln:0,stick:1,dot:2,out:3,ring:3,ell:3,txt:4};
+const drawAll=prims=>[...prims].sort((a,b)=>(order[a.t]||0)-(order[b.t]||0)).map(dp).join('');
+
+/* แถวรูป: items=[{m,label,sub,sub2}] วาดเป็น SVG เดียว */
+const narrow=()=>innerWidth<700;
+function row(items,o={}){
+  const maxH=o.maxH||220,W=o.W||900,gap=o.gap||34,fs=19;
+  const bs=items.map(it=>bounds(it.m));
+  if(items.length>2&&narrow()&&!o.u){ // จอมือถือ: จัดเป็นแถวละ 2 รูป ใช้มาตราส่วนเดียวกัน
+    const W2=480,pairs=[];for(let i=0;i<items.length;i+=2)pairs.push(i);
+    const u=Math.min(o.maxU||44,maxH/Math.max(...bs.map(b=>b.h)),...pairs.map(i=>(W2-gap)/(bs[i].w+(bs[i+1]?bs[i+1].w:0))));
+    return pairs.map(i=>row(items.slice(i,i+2),{...o,u,W:W2})).join('')}
+  const sumW=bs.reduce((a,b)=>a+b.w,0),maxBh=Math.max(...bs.map(b=>b.h));
+  const u=o.u||Math.min(o.maxU||44,maxH/maxBh,(W-gap*(items.length-1))/sumW);
+  const slots=items.map((it,i)=>Math.max(bs[i].w*u,o.minSlot||100,it.sub?segLen(it.sub)*fs*.52:0,it.sub2?segLen(it.sub2)*fs*.52:0,it.label?String(it.label).length*fs*.5:0));
+  const figH=maxBh*u;let x=0,out='';
+  const lines=(items.some(i=>i.label)?1:0)+(items.some(i=>i.sub)?1:0)+(items.some(i=>i.sub2)?1:0);
+  items.forEach((it,i)=>{const b=bs[i],w=b.w*u,h=b.h*u,ox=x+(slots[i]-w)/2,oy=o.top?0:figH-h;
+    out+=`<g transform="translate(${ox.toFixed(2)},${oy.toFixed(2)}) scale(${u.toFixed(4)}) translate(${-b.x0},${-b.y0})">${drawAll(it.m)}</g>`;
+    const cx=x+slots[i]/2;let ty=figH+26;
+    if(it.label){out+=`<text x="${cx}" y="${ty}" class="lab">${esc(it.label)}</text>`;ty+=28}
+    if(it.sub){out+=`<text x="${cx}" y="${ty}" class="sub" font-size="${fs}">${TS(it.sub)}</text>`;ty+=28}
+    if(it.sub2){out+=`<text x="${cx}" y="${ty}" class="sub" font-size="${fs}">${TS(it.sub2)}</text>`}
+    x+=slots[i]+gap});
+  const total=x-gap,Ht=figH+lines*28+(lines?6:0);
+  return `<svg class="fig" viewBox="-12 -12 ${total+24} ${Ht+24}" style="max-width:${Math.round(total+24)}px">${out}</svg>`}
+function tbl(head,rows,o={}){return `<div class="tbwrap"><table class="tb">${head?`<tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr>`:''}${rows.map((r,i)=>`<tr class="${(o.hl===i||(o.hlSet&&o.hlSet.includes(i)))?'hl':''}">${r.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</table></div>`}
+
+/* ลูกบาศก์แบบภาพ 3 มิติบนกระดาษ (isometric) */
+function iso(cubes,gap=0){const cs=Math.cos(Math.PI/6),P=(x,y,z)=>[(x-y)*cs,(x+y)*.5-z];
+  const arr=[...cubes].sort((a,b)=>(a.x+a.y+a.z)-(b.x+b.y+b.z)||a.z-b.z),out=[];
+  for(const c of arr){const {x,y}=c,z=c.z*(1+gap);
+    out.push({t:'poly',pts:[P(x,y+1,z),P(x+1,y+1,z),P(x+1,y+1,z+1),P(x,y+1,z+1)],fill:shade(c.c,-.28)},
+             {t:'poly',pts:[P(x+1,y,z),P(x+1,y+1,z),P(x+1,y+1,z+1),P(x+1,y,z+1)],fill:shade(c.c,-.1)},
+             {t:'poly',pts:[P(x,y,z+1),P(x+1,y,z+1),P(x+1,y+1,z+1),P(x,y+1,z+1)],fill:shade(c.c,.22),u:1})}
+  return out}
+
+/* ============ Three.js (3 มิติ หมุนได้) ============ */
+let threeP=null;const loadThree=()=>threeP||(threeP=Promise.all([import('three'),import('three/addons/controls/OrbitControls.js')]));
+const specs=new Map(),live=[];let sid=0;
+function three(spec){const id='t3_'+(sid++);specs.set(id,spec);
+  return `<div class="three" id="${id}"><div class="tload">กำลังโหลดภาพ 3 มิติ…</div>${spec.label?`<div class="lbl3">${spec.label}</div>`:''}<span class="hint">ลากเพื่อหมุน · หมุนล้อเพื่อซูม</span><button class="replay">▶ เล่นอีกครั้ง</button></div>`}
+function disposeAll(){while(live.length)live.pop()();specs.clear()}
+async function mountAll(root){const els=[...root.querySelectorAll('.three')];if(!els.length)return;
+  let mods;try{mods=await loadThree()}catch(e){els.forEach(el=>{const l=el.querySelector('.tload');if(l)l.textContent='ภาพ 3 มิติต้องต่ออินเทอร์เน็ต (โหลด Three.js ไม่ได้)'});return}
+  for(const el of els){const spec=specs.get(el.id);if(spec&&el.isConnected)mount3(el,spec,mods[0],mods[1].OrbitControls)}}
+function mount3(el,spec,T,Orbit){
+  const W=el.clientWidth||600,Hh=el.clientHeight||400;
+  const R=new T.WebGLRenderer({antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));R.setSize(W,Hh);
+  el.querySelector('.tload')?.remove();el.prepend(R.domElement);
+  const scene=new T.Scene();scene.add(new T.HemisphereLight(0xffffff,0x9aa4b0,1.7));
+  const dl=new T.DirectionalLight(0xffffff,1.6);dl.position.set(6,12,8);scene.add(dl);
+  const torus=spec.kind==='torus',dz=spec.dz||1,ex=spec.explode||0;
+  const items=spec.items;let mn=[1e9,1e9,1e9],mx=[-1e9,-1e9,-1e9];
+  for(const it of items){const p=[it.x,it.z*dz*(1+ex),it.y];for(let i=0;i<3;i++){mn[i]=Math.min(mn[i],p[i]);mx[i]=Math.max(mx[i],p[i])}}
+  const off=torus?0:.5,cen=[(mn[0]+mx[0])/2+off,(mn[1]+mx[1]+(torus?dz:1))/2,(mn[2]+mx[2])/2+off];
+  const layers=new Map();for(const it of items){if(!layers.has(it.z))layers.set(it.z,[]);layers.get(it.z).push(it)}
+  const keys=[...layers.keys()].sort((a,b)=>a-b);
+  const geos=[],mats=new Map();const mat=c=>{if(!mats.has(c))mats.set(c,new T.MeshStandardMaterial({color:c,roughness:.6}));return mats.get(c)};
+  const box=new T.BoxGeometry(.97,.97,.97),tor=new T.TorusGeometry(.3,.15,12,24),lineM=new T.LineBasicMaterial({color:0x33331f});geos.push(box,tor);
+  const root=new T.Group();scene.add(root);
+  if(spec.plate){const pw=mx[0]-mn[0]+2,pd=mx[2]-mn[2]+2,pg=new T.BoxGeometry(pw,.2,pd);geos.push(pg);const pm=new T.Mesh(pg,new T.MeshStandardMaterial({color:0xc9c9cf}));pm.position.set((mn[0]+mx[0])/2-cen[0],-.1-cen[1],(mn[2]+mx[2])/2-cen[2]);root.add(pm)}
+  const groups=keys.map(z=>{const g=new T.Group(),its=layers.get(z);
+    if(torus){its.forEach(it=>{const m=new T.Mesh(tor,mat(it.c));m.rotation.x=Math.PI/2;m.position.set(it.x-cen[0],.15,it.y-cen[2]);g.add(m)})}
+    else{const byC=new Map();its.forEach(it=>{if(!byC.has(it.c))byC.set(it.c,[]);byC.get(it.c).push(it)});
+      const M=new T.Matrix4();
+      for(const [c,list] of byC){const im=new T.InstancedMesh(box,mat(c),list.length);list.forEach((it,j)=>{M.makeTranslation(it.x+.5-cen[0],.5,it.y+.5-cen[2]);im.setMatrixAt(j,M)});g.add(im)}
+      const pos=[];its.forEach(it=>{const x0=it.x-cen[0],x1=x0+1,z0=it.y-cen[2],z1=z0+1;const E=[[x0,0,z0,x1,0,z0],[x1,0,z0,x1,0,z1],[x1,0,z1,x0,0,z1],[x0,0,z1,x0,0,z0],[x0,1,z0,x1,1,z0],[x1,1,z0,x1,1,z1],[x1,1,z1,x0,1,z1],[x0,1,z1,x0,1,z0],[x0,0,z0,x0,1,z0],[x1,0,z0,x1,1,z0],[x1,0,z1,x1,1,z1],[x0,0,z1,x0,1,z1]];E.forEach(e=>pos.push(...e))});
+      const lg=new T.BufferGeometry();lg.setAttribute('position',new T.Float32BufferAttribute(pos,3));geos.push(lg);g.add(new T.LineSegments(lg,lineM))}
+    g.userData.y=z*dz*(1+ex)-cen[1];root.add(g);return g});
+  const rad=Math.max(1.5,Math.hypot(mx[0]-mn[0]+1,mx[1]-mn[1]+1,mx[2]-mn[2]+1)/2);
+  const cam=new T.PerspectiveCamera(35,W/Hh,.1,500);const dir=new T.Vector3(1.15,.95,1.45).normalize();
+  cam.position.copy(dir.multiplyScalar(rad*3.1));
+  const ctl=new Orbit(cam,R.domElement);ctl.enableDamping=true;ctl.target.set(0,0,0);ctl.update();
+  const step=spec.anim===false?0:(spec.step||Math.min(.5,4/keys.length));let start=performance.now(),raf;
+  const ease=t=>1-Math.pow(1-t,3);
+  function frame(now){const t=(now-start)/1000;
+    groups.forEach((g,i)=>{const p=step?Math.min(1,Math.max(0,(t-i*step)/.45)):1;g.visible=p>0;g.position.y=g.userData.y+(1-ease(p))*3});
+    ctl.update();R.render(scene,cam);raf=requestAnimationFrame(frame)}
+  raf=requestAnimationFrame(frame);
+  el.querySelector('.replay').onclick=()=>{start=performance.now()};
+  const ro=new ResizeObserver(()=>{const w=el.clientWidth,h=el.clientHeight;if(!w)return;R.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix()});ro.observe(el);
+  live.push(()=>{cancelAnimationFrame(raf);ro.disconnect();ctl.dispose();geos.forEach(g=>g.dispose());mats.forEach(m=>m.dispose());lineM.dispose();R.dispose();R.domElement.remove()})}
+
+/* ============ ตัวสร้างข้อแบบรูป (6 ขั้นมาตรฐาน) ============ */
+const P=[];
+function pattern(c){
+  const unit=c.unit||'รูป',ask=c.ask;
+  const cnt=c.cnt||(n=>[[`${fmt(c.count(n))} ${unit}`,C.ink]]);
+  const eq=c.eq||(n=>[...c.segs(n),[` = ${fmt(c.count(n))}`,C.ink]]);
+  const figs=(hl,sub)=>row([1,2,3,4].map(n=>({m:c.fig(n,hl),label:`รูปที่ ${n}`,sub:sub?sub(n):null})),c.rowOpt);
+  const cs=[1,2,3,4].map(c.count),d=[cs[1]-cs[0],cs[2]-cs[1],cs[3]-cs[2]],same=d.every(v=>v===d[0]);
+  const diff=c.diff||(`รูปที่ 1 ถึงรูปที่ 4 มี ${cs.map(fmt).join(', ')} ${unit} ตามลำดับ<br>`+(same?`จำนวนเพิ่มขึ้นทีละ <b>${d[0]}</b> ${unit} เท่ากันทุกครั้ง`:`จำนวนที่เพิ่มขึ้นคือ ${d.join(', ')} ซึ่ง<b>ไม่เท่ากัน</b> จึงต้องดูให้ละเอียดว่าส่วนไหนเพิ่มขึ้น`));
+  const askTbl=k=>c.table?tbl(['',...c.table.map(n=>`รูปที่ ${n}`)],[[c.tlabel,...c.table.map((n,i)=>i<k?`<b style="color:${C.red}">${fmt(c.count(n))}</b>`:'…')]]):'';
+  const steps=[
+    {t:'อ่านโจทย์ ดูรูปที่ 1–4',stage:()=>figs(false)+askTbl(0),x:`<p>${c.q}</p><p class="tip">💡 ดูว่ารูปถัดไปต่างจากรูปก่อนหน้าอย่างไร</p>`},
+    {t:'นับจำนวนในแต่ละรูป',stage:()=>figs(false,cnt)+askTbl(4),x:diff},
+    {t:'แยกส่วนให้เห็นแบบรูป',stage:()=>figs(true),x:c.split},
+    {t:'เขียนความสัมพันธ์',stage:()=>figs(true,c.segs)+(c.tbl?tbl(c.tbl.head,[1,2,3,4].map(c.tbl.row)):''),x:c.rel},
+    {t:'ตรวจสอบกับรูปที่ 5',stage:()=>row([{m:c.fig(5,true),label:'รูปที่ 5',sub:eq(5)}],{maxH:250}),
+      x:`ถ้าความสัมพันธ์ถูกต้อง รูปที่ 5 ต้องมี ${H(eq(5))} ${unit}<br>ลองนับในรูปจริงก็ได้เท่านี้ ✓ แสดงว่าความสัมพันธ์ใช้ได้`},
+    {t:`หาคำตอบ: รูปที่ ${ask}`,stage:()=>row([{m:c.fig(ask,true),label:`รูปที่ ${ask}`}],{maxH:c.askH||320,maxU:56})+`<div class="formula">รูปที่ ${ask}: ${H(eq(ask))}</div>`+askTbl(c.table?c.table.length:0),
+      x:c.final?c.final(ask):`ดังนั้น รูปที่ ${ask} มี ${c.chip||''} ทั้งหมด ${H(eq(ask))} ${unit}<br><span class="ans">ตอบ ${fmt(c.count(ask))} ${unit}</span>`}];
+  P.push({...c,steps,cfg:c,try:{label:'รูปที่',min:1,max:c.tryMax||12,init:5,
+    render:n=>({stage:row([{m:c.fig(n,true),label:`รูปที่ ${n}`,sub:eq(n)}],{maxH:330,maxU:56}),
+      info:`รูปที่ ${n} มี ${H(eq(n))} ${unit}`+(c.tryNote?c.tryNote(n):(n>1&&!c.multi?`<br>เพิ่มจากรูปที่ ${n-1} อยู่ ${fmt(c.count(n)-c.count(n-1))} ${unit}`:''))})}})}
+const ink=t=>[t,C.ink];
+
+/* ---------- แบบฝึกหัด 5.3 ข้อ 1 ---------- */
+pattern({id:'1.1',sec:'5.3',grp:'ข้อ 1',name:'1) ตัว L สีเหลือง',page:134,ask:13,tryMax:15,chip:chip(F.yellow),
+  q:`รูปที่ 13 มี ${chip(F.yellow)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[],O=[];for(let k=0;k<n;k++){const L=[[k,k],[k+1,k],[k,k+1]];L.forEach(([x,y])=>A.push(sqU(x,y,F.yellow)));if(hl)O.push(outU(L,C.red))}return A.concat(O)},
+  count:n=>3*n,segs:n=>[[`${n} × 3`,C.red]],
+  split:`แต่ละรูปประกอบด้วย <b style="color:${C.red}">รูปตัว L</b> (กรอบแดง) ตัวละ 3 รูป<br>รูปที่ 1 มี 1 ตัว รูปที่ 2 มี 2 ตัว รูปที่ 3 มี 3 ตัว รูปที่ 4 มี 4 ตัว<br>→ จำนวนตัว L เท่ากับลำดับที่ของรูป`,
+  rel:`รูปที่ 1 = 1 × 3, รูปที่ 2 = 2 × 3, รูปที่ 3 = 3 × 3, รูปที่ 4 = 4 × 3<br>จำนวน ${chip(F.yellow)} = <b style="color:${C.red}">(ลำดับที่ของรูป) × 3</b>`});
+
+pattern({id:'1.2',sec:'5.3',grp:'ข้อ 1',name:'2) สี่เหลี่ยมสีฟ้า',page:134,ask:20,tryMax:20,chip:chip(F.sky),
+  q:`รูปที่ 20 มี ${chip(F.sky)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[],B=[];for(let x=0;x<n;x++)for(let y=0;y<3;y++){A.push(sqU(x,y,F.sky));B.push([x,y])}A.push(sqU(n,0,F.sky),sqU(n,1,F.sky));
+    return hl?A.concat([outU(B,C.red),outU([[n,0],[n,1]],C.green)]):A},
+  count:n=>3*n+2,segs:n=>[[`(${n} × 3)`,C.red],ink(' + '),['2',C.green]],
+  split:`แบ่งแต่ละรูปเป็น 2 ส่วน<br>• <b style="color:${C.red}">กรอบแดง</b> สูง 3 แถว กว้างเท่ากับลำดับที่ของรูป<br>• <b style="color:${C.green}">กรอบเขียว</b> ติดด้านขวา มี 2 รูปเท่าเดิมทุกรูป`,
+  rel:`รูปที่ 1 = (1 × 3) + 2, รูปที่ 2 = (2 × 3) + 2, …<br>จำนวน ${chip(F.sky)} = <b><span style="color:${C.red}">(ลำดับที่ของรูป × 3)</span> + <span style="color:${C.green}">2</span></b>`});
+
+pattern({id:'1.3',sec:'5.3',grp:'ข้อ 1',name:'3) รูปสีเขียว',page:134,ask:9,tryMax:12,chip:chip(F.green),
+  q:`รูปที่ 9 มี ${chip(F.green)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[],B=[];for(let x=0;x<n+2;x++)for(let y=0;y<n;y++){A.push(sqU(x,y,F.green));B.push([x,y])}A.push(sqU(1,n,F.green),sqU(1,-1,F.green));
+    return hl?A.concat([outU(B,C.red),outU([[1,n]],C.blue),outU([[1,-1]],C.blue)]):A},
+  count:n=>n*(n+2)+2,segs:n=>[[`(${n} × ${n+2})`,C.red],ink(' + '),['2',C.blue]],
+  split:`• <b style="color:${C.red}">กรอบแดง</b> เป็นสี่เหลี่ยมผืนผ้า จำนวนแถวเท่ากับลำดับที่ของรูป และแต่ละแถวยาวกว่าลำดับที่ของรูปอยู่ 2<br>• <b style="color:${C.blue}">กรอบน้ำเงิน</b> ยื่นออกมาด้านบน 1 รูป ด้านล่าง 1 รูป รวม 2 รูปเสมอ`,
+  rel:`รูปที่ 1 = (1 × 3) + 2, รูปที่ 2 = (2 × 4) + 2, รูปที่ 3 = (3 × 5) + 2, รูปที่ 4 = (4 × 6) + 2<br>จำนวน = <b><span style="color:${C.red}">(ลำดับที่ × (ลำดับที่ + 2))</span> + <span style="color:${C.blue}">2</span></b>`});
+
+pattern({id:'1.4',sec:'5.3',grp:'ข้อ 1',name:'4) แถบชมพูมีช่อง',page:134,ask:10,tryMax:12,chip:chip(F.pink),
+  q:`รูปที่ 10 มี ${chip(F.pink)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[];for(let x=0;x<2*n+1;x++)for(let y=0;y<3;y++){if(y===1&&x%2===1)continue;A.push(sqU(x,y,F.pink))}
+    if(!hl)return A;const O=[outU([[0,0],[0,1],[0,2],[1,0],[1,2],[2,0],[2,1],[2,2]],C.blue)];
+    for(let k=1;k<n;k++)O.push(outU([[2*k+1,0],[2*k+1,2],[2*k+2,0],[2*k+2,1],[2*k+2,2]],C.green));return A.concat(O)},
+  count:n=>8+5*(n-1),segs:n=>n===1?[['8',C.blue]]:[['8',C.blue],ink(' + '),[`(${n-1} × 5)`,C.green]],
+  split:`• รูปที่ 1 มี 8 รูป (<b style="color:${C.blue}">กรอบน้ำเงิน</b>)<br>• รูปถัดไปต่อเพิ่มทีละ 1 ชุด ชุดละ 5 รูป (<b style="color:${C.green}">กรอบเขียว</b>)<br>รูปที่ 2 เพิ่ม 1 ชุด รูปที่ 3 เพิ่ม 2 ชุด → จำนวนชุดที่เพิ่ม น้อยกว่าลำดับที่ของรูปอยู่ 1`,
+  rel:`รูปที่ 2 = 8 + (1 × 5), รูปที่ 3 = 8 + (2 × 5), รูปที่ 4 = 8 + (3 × 5)<br>จำนวน = <b><span style="color:${C.blue}">8</span> + <span style="color:${C.green}">((ลำดับที่ − 1) × 5)</span></b>`});
+
+function cb5(k){if(k===1)return [3,1];const j=k-2,c=4+2*Math.floor(j/3),m=j%3;return m===0?[c,2]:m===1?[c+1,1]:[c,0]}
+pattern({id:'1.5',sec:'5.3',grp:'ข้อ 1',name:'5) ลายหมากรุกสีม่วง',page:135,ask:18,tryMax:20,chip:chip(F.purple),
+  q:`รูปที่ 18 มี ${chip(F.purple)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const base=[[0,0],[2,0],[1,1],[0,2],[2,2]],A=base.map(([x,y])=>sqU(x,y,F.purple)),O=[];
+    for(let k=1;k<=n;k++){const [x,y]=cb5(k);A.push(sqU(x,y,F.purple));if(hl)O.push(outU([[x,y]],C.green))}
+    if(hl)base.forEach(q=>O.push(outU([q],C.red)));return A.concat(O)},
+  count:n=>5+n,segs:n=>[['5',C.red],ink(' + '),[`${n}`,C.green]],
+  split:`• ทุกรูปมีส่วนที่เหมือนกัน 5 รูป (<b style="color:${C.red}">กรอบแดง</b>) เรียงเป็นรูปกากบาท<br>• ส่วนที่ต่อเพิ่ม (<b style="color:${C.green}">กรอบเขียว</b>) มีจำนวนเท่ากับลำดับที่ของรูป`,
+  rel:`รูปที่ 1 = 5 + 1, รูปที่ 2 = 5 + 2, รูปที่ 3 = 5 + 3, รูปที่ 4 = 5 + 4<br>จำนวน = <b><span style="color:${C.red}">5</span> + <span style="color:${C.green}">ลำดับที่ของรูป</span></b>`});
+
+pattern({id:'1.6',sec:'5.3',grp:'ข้อ 1',name:'6) ส้ม ฟ้า ชมพู',page:135,ask:7,tryMax:10,multi:true,
+  q:`รูปที่ 7 มี ${chip(F.orange)} กี่รูป มี ${chip(F.lblue)} กี่รูป มี ${chip(F.pink)} กี่รูป และรวมกันทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[],Ob=[],Ol=[],Op=[];
+    for(let x=0;x<n;x++)for(let y=0;y<n;y++){A.push(sqU(x,y,F.orange));Ob.push([x,y])}
+    for(let y=0;y<3*n;y++){A.push(sqU(n,y,F.lblue));Ol.push([n,y])}
+    for(let y=2*n;y<3*n;y++){A.push(sqU(n+1,y,F.pink));Op.push([n+1,y])}
+    return hl?A.concat([outU(Ob,C.blue),outU(Ol,C.red),outU(Op,C.green)]):A},
+  count:n=>n*n+3*n+n,segs:n=>[[`(${n} × ${n})`,C.blue],ink(' + '),[`(${n} × 3)`,C.red],ink(' + '),[`${n}`,C.green]],
+  diff:`ส้ม: 1, 4, 9, 16 · ฟ้า: 3, 6, 9, 12 · ชมพู: 1, 2, 3, 4<br>แต่ละสีเพิ่มไม่เหมือนกัน จึงต้องแยกดูทีละสี`,
+  split:`• ${chip(F.orange)} (<b style="color:${C.blue}">กรอบน้ำเงิน</b>) เป็นสี่เหลี่ยมจัตุรัส ด้านยาวเท่ากับลำดับที่ของรูป<br>• ${chip(F.lblue)} (<b style="color:${C.red}">กรอบแดง</b>) สูงเป็น 3 เท่าของลำดับที่ของรูป<br>• ${chip(F.pink)} (<b style="color:${C.green}">กรอบเขียว</b>) เท่ากับลำดับที่ของรูป`,
+  rel:`รูปที่ 4 = <span style="color:${C.blue}">(4 × 4)</span> + <span style="color:${C.red}">(4 × 3)</span> + <span style="color:${C.green}">4</span><br>ส้ม = ลำดับที่ × ลำดับที่ · ฟ้า = ลำดับที่ × 3 · ชมพู = ลำดับที่`,
+  final:n=>`รูปที่ 7 มี ${chip(F.orange)} <b>7 × 7 = 49</b> รูป<br>มี ${chip(F.lblue)} <b>7 × 3 = 21</b> รูป<br>มี ${chip(F.pink)} <b>7</b> รูป<br>รวมกันทั้งหมด (7 × 7) + (7 × 3) + 7 = <b>77</b> รูป<br><span class="ans">ตอบ ส้ม 49 รูป ฟ้า 21 รูป ชมพู 7 รูป รวม 77 รูป</span>`});
+
+pattern({id:'1.7',sec:'5.3',grp:'ข้อ 1',name:'7) บันไดสีน้ำตาล',page:135,ask:14,tryMax:15,chip:chip(F.brown),
+  q:`รูปที่ 14 มี ${chip(F.brown)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[],O=[];for(let k=0;k<n-1;k++){const pr=[[k,k],[k,k+1]];pr.forEach(([x,y])=>A.push(sqU(x,y,F.brown)));if(hl)O.push(outU(pr,C.red))}
+    A.push(sqU(n-1,n-1,F.brown));if(hl)O.push(outU([[n-1,n-1]],C.green));return A.concat(O)},
+  count:n=>1+2*(n-1),segs:n=>n===1?[['1',C.green]]:[['1',C.green],ink(' + '),[`(${n-1} × 2)`,C.red]],
+  split:`• รูปบนสุด 1 รูป (<b style="color:${C.green}">กรอบเขียว</b>) มีทุกรูป<br>• ที่เหลือเป็นคู่ (<b style="color:${C.red}">กรอบแดง</b>) คู่ละ 2 รูป จำนวนคู่น้อยกว่าลำดับที่ของรูปอยู่ 1`,
+  rel:`รูปที่ 2 = 1 + (1 × 2), รูปที่ 3 = 1 + (2 × 2), รูปที่ 4 = 1 + (3 × 2)<br>จำนวน = <b><span style="color:${C.green}">1</span> + <span style="color:${C.red}">((ลำดับที่ − 1) × 2)</span></b>`});
+
+const RING=[C.green,C.purple,C.pink,C.orange,C.blue,C.teal,C.gold];
+pattern({id:'1.8',sec:'5.3',grp:'ข้อ 1',name:'8) กากบาทสีน้ำเงิน',page:135,ask:8,tryMax:10,chip:chip(F.blue),
+  q:`รูปที่ 8 มี ${chip(F.blue)} ทั้งหมดกี่รูป`,
+  fig(n,hl){const A=[[0,0],[1,0]].map(([x,y])=>sqU(x,y,F.blue)),O=hl?[outU([[0,0],[1,0]],C.red)]:[];
+    for(let k=1;k<n;k++){const cells=[];for(const y of [k,-k])for(const x of [-k,-k+1,k,k+1])cells.push([x,y]);
+      cells.forEach(([x,y])=>A.push(sqU(x,y,F.blue)));if(hl)O.push(outU(cells,RING[(k-1)%RING.length]))}return A.concat(O)},
+  count:n=>2+8*(n-1),
+  segs:n=>{if(n>4)return [['2',C.red],ink(' + '),[`(${n-1} × 8)`,C.green]];const s=[['2',C.red]];for(let k=1;k<n;k++)s.push(ink(' + '),['(4 × 2)',RING[k-1]]);return s},
+  split:`• ตรงกลางมี 2 รูป (<b style="color:${C.red}">กรอบแดง</b>)<br>• แต่ละรูปถัดไปมีแขนเพิ่มออกไปอีก 1 ชั้น (กรอบสี) ชั้นละ 4 คู่ = 4 × 2 = 8 รูป<br>• จำนวนชั้นที่เพิ่ม น้อยกว่าลำดับที่ของรูปอยู่ 1`,
+  rel:`รูปที่ 2 = 2 + (4 × 2)<br>รูปที่ 3 = 2 + (4 × 2) + (4 × 2)<br>รูปที่ 4 = 2 + (4 × 2) + (4 × 2) + (4 × 2)`,
+  final:n=>`รูปที่ 8 มีแขนเพิ่ม 7 ชั้น ชั้นละ (4 × 2) รูป<br>2 + (4 × 2) + (4 × 2) + (4 × 2) + (4 × 2) + (4 × 2) + (4 × 2) + (4 × 2) = 2 + 56 = <b>58</b> รูป<br><span class="ans">ตอบ 58 รูป</span>`});
+
+/* ---------- ข้อ 2 ไม้ขีด ---------- */
+const h3=Math.sqrt(3)/2;
+pattern({id:'2.1',sec:'5.3',grp:'ข้อ 2',name:'1) หกเหลี่ยม',page:136,ask:8,tryMax:12,unit:'ก้าน',table:[1,2,3,4,8],tlabel:'จำนวนไม้ขีด (ก้าน)',
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนไม้ขีดของรูปที่ 1, 2, 3, 4 และ 8`,
+  fig(n,hl){const b=hl?C.blue:null,g=hl?C.green:null,h=h3;
+    const A=[stick(.5,0,1.5,0,b),stick(1.5,0,2,h,b),stick(2,h,1.5,2*h,b),stick(1.5,2*h,.5,2*h,b),stick(.5,2*h,0,h,b),stick(0,h,.5,0,b)];
+    for(let k=1;k<n;k++)A.push(stick(.5+k,0,1.5+k,0,g),stick(1.5+k,0,2+k,h,g),stick(2+k,h,1.5+k,2*h,g),stick(.5+k,2*h,1.5+k,2*h,g));return A},
+  count:n=>6+4*(n-1),segs:n=>n===1?[['6',C.blue]]:[['6',C.blue],ink(' + '),[`(${n-1} × 4)`,C.green]],
+  split:`• รูปที่ 1 เป็นรูปหกเหลี่ยม ใช้ไม้ขีด 6 ก้าน (<b style="color:${C.blue}">สีน้ำเงิน</b>)<br>• รูปถัดไปต่อเพิ่มทีละ 4 ก้าน (<b style="color:${C.green}">สีเขียว</b>) เพราะใช้ 2 ก้านทางขวาของรูปเดิมร่วมกัน`,
+  rel:`รูปที่ 2 = 6 + (1 × 4), รูปที่ 3 = 6 + (2 × 4), รูปที่ 4 = 6 + (3 × 4)<br>จำนวนไม้ขีด = <b><span style="color:${C.blue}">6</span> + <span style="color:${C.green}">((ลำดับที่ − 1) × 4)</span></b>`,
+  final:n=>`ดังนั้น รูปที่ 8 มีไม้ขีด 6 + (7 × 4) = <b>34</b> ก้าน<br><span class="ans">ตอบ 6, 10, 14, 18 และ 34 ก้าน</span>`});
+
+pattern({id:'2.2',sec:'5.3',grp:'ข้อ 2',name:'2) ต้นไม้',page:136,ask:8,tryMax:10,unit:'ก้าน',table:[1,2,3,4,8],tlabel:'จำนวนไม้ขีด (ก้าน)',
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนไม้ขีดของรูปที่ 1, 2, 3, 4 และ 8`,
+  fig(n,hl){const b=hl?C.blue:null,g=hl?C.green:null,A=[stick(0,.95,0,0,b)];
+    for(let k=0;k<n;k++){const yb=-k*.62;A.push(stick(-.5,yb,.5,yb,g),stick(.5,yb,0,yb-h3,g),stick(0,yb-h3,-.5,yb,g))}return A},
+  count:n=>1+3*n,segs:n=>[['1',C.blue],ink(' + '),[`(${n} × 3)`,C.green]],
+  split:`• ลำต้น 1 ก้าน (<b style="color:${C.blue}">สีน้ำเงิน</b>) มีทุกรูป<br>• รูปสามเหลี่ยม (<b style="color:${C.green}">สีเขียว</b>) ใช้ 3 ก้านต่อ 1 รูป จำนวนสามเหลี่ยมเท่ากับลำดับที่ของรูป`,
+  rel:`รูปที่ 1 = 1 + (1 × 3), รูปที่ 2 = 1 + (2 × 3), …<br>จำนวนไม้ขีด = <b><span style="color:${C.blue}">1</span> + <span style="color:${C.green}">(ลำดับที่ × 3)</span></b>`,
+  final:n=>`ดังนั้น รูปที่ 8 มีไม้ขีด 1 + (8 × 3) = <b>25</b> ก้าน<br><span class="ans">ตอบ 4, 7, 10, 13 และ 25 ก้าน</span>`});
+
+pattern({id:'2.3',sec:'5.3',grp:'ข้อ 2',name:'3) สามเหลี่ยมเรียงแถว',page:136,ask:8,tryMax:15,unit:'ก้าน',table:[1,2,3,4,8],tlabel:'จำนวนไม้ขีด (ก้าน)',
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนไม้ขีดของรูปที่ 1, 2, 3, 4 และ 8`,
+  fig(n,hl){const g=hl?C.green:null,b=hl?C.blue:null,h=h3;const A=[stick(0,0,1,0,g),stick(1,0,.5,-h,g),stick(.5,-h,0,0,g)];
+    for(let i=1;i<n;i++){if(i%2===1){const L=(i-1)/2;A.push(stick(L+.5,-h,L+1.5,-h,b),stick(L+1.5,-h,L+1,0,b))}else{const L=i/2;A.push(stick(L,0,L+1,0,b),stick(L+1,0,L+.5,-h,b))}}return A},
+  count:n=>3+2*(n-1),segs:n=>n===1?[['3',C.green]]:[['3',C.green],ink(' + '),[`(${n-1} × 2)`,C.blue]],
+  split:`• สามเหลี่ยมรูปแรกใช้ 3 ก้าน (<b style="color:${C.green}">สีเขียว</b>)<br>• สามเหลี่ยมรูปต่อ ๆ ไปใช้ด้านร่วมกับรูปก่อนหน้า 1 ด้าน จึงเพิ่มเพียง 2 ก้าน (<b style="color:${C.blue}">สีน้ำเงิน</b>)`,
+  rel:`รูปที่ 2 = 3 + (1 × 2), รูปที่ 3 = 3 + (2 × 2), รูปที่ 4 = 3 + (3 × 2)<br>จำนวนไม้ขีด = <b><span style="color:${C.green}">3</span> + <span style="color:${C.blue}">((ลำดับที่ − 1) × 2)</span></b>`,
+  final:n=>`ดังนั้น รูปที่ 8 มีไม้ขีด 3 + (7 × 2) = <b>17</b> ก้าน<br><span class="ans">ตอบ 3, 5, 7, 9 และ 17 ก้าน</span>`});
+
+pattern({id:'2.4',sec:'5.3',grp:'ข้อ 2',name:'4) สี่เหลี่ยมมีแฉก',page:136,ask:8,tryMax:10,unit:'ก้าน',table:[1,2,3,4,8],tlabel:'จำนวนไม้ขีด (ก้าน)',
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนไม้ขีดของรูปที่ 1, 2, 3, 4 และ 8`,
+  fig(n,hl){const r=hl?C.red:null,b=hl?C.blue:null,g=hl?C.green:null,h=h3,A=[];
+    for(let k=0;k<n;k++)A.push(stick(k,0,k+1,0,r),stick(k,1,k+1,1,r));for(let x=0;x<=n;x++)A.push(stick(x,0,x,1,r));
+    for(let k=0;k<n;k++)A.push(stick(k,0,k+.5,-h,b),stick(k+.5,-h,k+1,0,b),stick(k,1,k+.5,1+h,b),stick(k+.5,1+h,k+1,1,b));
+    A.push(stick(0,0,-h,.5,g),stick(-h,.5,0,1,g),stick(n,0,n+h,.5,g),stick(n+h,.5,n,1,g));return A},
+  count:n=>7*n+5,
+  segs:n=>n===1?[['(1 × 4)',C.red],ink(' + '),['(2 × 2)',C.blue],ink(' + '),['4',C.green]]:[[`(${n} × 4)`,C.red],ink(` − ${n-1} + `),[`(${2*n} × 2)`,C.blue],ink(' + '),['4',C.green]],
+  split:`• <b style="color:${C.red}">สี่เหลี่ยม</b>มีจำนวนเท่ากับลำดับที่ของรูป รูปละ 4 ก้าน แต่ด้านที่ติดกันใช้ร่วมกัน จึงลบออก (ลำดับที่ − 1) ก้าน<br>• <b style="color:${C.blue}">สามเหลี่ยมบนและล่าง</b> มีเป็น 2 เท่าของลำดับที่ รูปละ 2 ก้าน<br>• <b style="color:${C.green}">แฉกซ้ายและขวา</b> ใช้ 4 ก้านเสมอ`,
+  rel:`รูปที่ 2 = (2 × 4) − 1 + (4 × 2) + 4<br>รูปที่ 3 = (3 × 4) − 2 + (6 × 2) + 4<br>รูปที่ 4 = (4 × 4) − 3 + (8 × 2) + 4`,
+  final:n=>`ดังนั้น รูปที่ 8 มีไม้ขีด (8 × 4) − 7 + (16 × 2) + 4 = 32 − 7 + 32 + 4 = <b>61</b> ก้าน<br><span class="ans">ตอบ 12, 19, 26, 33 และ 61 ก้าน</span>`});
+
+/* ---------- ข้อ 3 จุด ---------- */
+function triDots(n,hl){const A=[],h=h3,pos=(r,i)=>[i-r/2,r*h];
+  for(let r=0;r<n;r++)for(let i=0;i<=r;i++){const [x,y]=pos(r,i);
+    if(i<r){const [x2,y2]=pos(r,i+1);A.push({t:'ln',x1:x,y1:y,x2,y2,c:'#4cc3d9'})}
+    if(r<n-1){const [a,b]=pos(r+1,i),[c2,d]=pos(r+1,i+1);A.push({t:'ln',x1:x,y1:y,x2:a,y2:b,c:'#4cc3d9'},{t:'ln',x1:x,y1:y,x2:c2,y2:d,c:'#4cc3d9'})}
+    A.push({t:'dot',x,y,u:1})}
+  if(hl)for(let r=0;r<n;r++)A.push(txt(r/2+.55,r*h,r+1,C.red,.48,'start'));return A}
+const sumList=n=>Array.from({length:n},(_,i)=>i+1).join(' + ');
+pattern({id:'3.1',sec:'5.3',grp:'ข้อ 3',name:'1) จุดสามเหลี่ยม',page:137,ask:9,tryMax:12,unit:'จุด',table:[1,2,3,4,9],tlabel:'จำนวนจุด',
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนจุดของรูปที่ 1, 2, 3, 4 และ 9`,fig:triDots,
+  count:n=>n*(n+1)/2,segs:n=>[[n<=10?sumList(n):`1 + 2 + … + ${n}`,C.red]],
+  split:`นับจุดทีละแถวจากบนลงล่าง (<b style="color:${C.red}">ตัวเลขสีแดง</b>)<br>แถวบนสุดมี 1 จุด แถวถัดไปมีเพิ่มขึ้นทีละ 1 จุด<br>รูปที่ 1 มี 1 แถว รูปที่ 2 มี 2 แถว … จำนวนแถวเท่ากับลำดับที่ของรูป`,
+  rel:`รูปที่ 2 = 1 + 2, รูปที่ 3 = 1 + 2 + 3, รูปที่ 4 = 1 + 2 + 3 + 4<br>จำนวนจุด = <b style="color:${C.red}">1 + 2 + 3 + … + ลำดับที่ของรูป</b>`,
+  final:n=>`ดังนั้น รูปที่ 9 มีจุด 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = <b>45</b> จุด<br><span class="ans">ตอบ 1, 3, 6, 10 และ 45 จุด</span>`});
+
+pattern({id:'3.2',sec:'5.3',grp:'ข้อ 3',name:'2) จุดสี่เหลี่ยม',page:137,ask:9,tryMax:12,unit:'จุด',table:[1,2,3,4,9],tlabel:'จำนวนจุด',
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนจุดของรูปที่ 1, 2, 3, 4 และ 9`,
+  fig(n,hl){const A=[],m=n+1;for(let i=0;i<m;i++)for(let j=0;j<m;j++){if(i<n)A.push({t:'ln',x1:i,y1:j,x2:i+1,y2:j,c:'#4cc3d9'});if(j<n)A.push({t:'ln',x1:i,y1:j,x2:i,y2:j+1,c:'#4cc3d9'});A.push({t:'dot',x:i,y:j,u:1})}
+    if(hl){for(let i=0;i<m;i++)A.push(txt(i,n+.55,i+1,C.red,.42));for(let j=0;j<m;j++)A.push(txt(-.55,j,j+1,C.blue,.42))}return A},
+  count:n=>(n+1)**2,segs:n=>[[`${n+1}`,C.red],ink(' × '),[`${n+1}`,C.blue]],
+  split:`จุดเรียงเป็นสี่เหลี่ยมจัตุรัส นับจุดด้านล่าง (<b style="color:${C.red}">แดง</b>) และด้านข้าง (<b style="color:${C.blue}">น้ำเงิน</b>)<br>รูปที่ 1 ด้านละ 2 จุด รูปที่ 2 ด้านละ 3 จุด … ด้านละ (ลำดับที่ + 1) จุด`,
+  rel:`รูปที่ 1 = 2 × 2, รูปที่ 2 = 3 × 3, รูปที่ 3 = 4 × 4, รูปที่ 4 = 5 × 5<br>จำนวนจุด = <b>(ลำดับที่ + 1) × (ลำดับที่ + 1)</b>`,
+  final:n=>`ดังนั้น รูปที่ 9 มีจุด 10 × 10 = <b>100</b> จุด<br><span class="ans">ตอบ 4, 9, 16, 25 และ 100 จุด</span>`});
+
+function honey(n,hl){const s3=Math.sqrt(3),pts=new Map(),E=new Set(),A=[],key=(x,y)=>`${Math.round(x*1e3)},${Math.round(y*1e3)}`;
+  for(let r=0;r<n;r++)for(let i=0;i<=r;i++){const cx=(i-r/2)*s3,cy=r*1.5,vs=hexPts(cx,cy,1,false);
+    vs.forEach(v=>pts.set(key(...v),v));for(let j=0;j<6;j++){const a=key(...vs[j]),b=key(...vs[(j+1)%6]);const k=a<b?a+'|'+b:b+'|'+a;if(!E.has(k)){E.add(k);const v2=vs[(j+1)%6];A.push({t:'ln',x1:vs[j][0],y1:vs[j][1],x2:v2[0],y2:v2[1],c:'#4cc3d9'})}}}
+  const P2=[...pts.values()];P2.forEach(([x,y])=>A.push({t:'dot',x,y,u:1,r:.15}));
+  if(hl){const lv=[...new Set(P2.map(p=>Math.round(p[1]*1e3)))].sort((a,b)=>a-b);
+    for(let j=0;j<lv.length;j+=2){const g=P2.filter(p=>{const y=Math.round(p[1]*1e3);return y===lv[j]||y===lv[j+1]});
+      const xs=g.map(p=>p[0]),x0=Math.min(...xs),x1=Math.max(...xs),cy=(lv[j]+lv[j+1])/2000;
+      A.push({t:'ell',cx:(x0+x1)/2,cy,rx:(x1-x0)/2+.45,ry:.55,c:C.red},txt(x1+.75,cy,g.length,C.red,.6,'start'))}}
+  return A}
+const honeySegs=n=>{const g=[];for(let j=0;j<n;j++)g.push(2*j+3);g.push(2*n+1);return g};
+pattern({id:'3.3',sec:'5.3',grp:'ข้อ 3',name:'3) จุดรังผึ้ง',page:137,ask:9,tryMax:10,unit:'จุด',table:[1,2,3,4,9],tlabel:'จำนวนจุด',askH:360,
+  q:`พิจารณาแบบรูป แล้วเติมจำนวนจุดของรูปที่ 1, 2, 3, 4 และ 9`,fig:honey,
+  count:n=>n*n+4*n+1,segs:n=>[[honeySegs(n).join(' + '),C.red]],
+  split:`ใช้<b style="color:${C.red}">วงรี</b>แบ่งจุดเป็นแถวซิกแซกจากบนลงล่าง<br>• แถวบนสุดมี 3 จุด แถวถัดลงมามีเพิ่มทีละ 2 จุด (3, 5, 7, 9, …)<br>• <b>แถวล่างสุด</b>มีจำนวนจุดเท่ากับแถวที่อยู่เหนือมัน`,
+  rel:`รูปที่ 1 = 3 + 3<br>รูปที่ 2 = 3 + 5 + 5<br>รูปที่ 3 = 3 + 5 + 7 + 7<br>รูปที่ 4 = 3 + 5 + 7 + 9 + 9`,
+  final:n=>`รูปที่ 9 มีแถวซิกแซก 3, 5, 7, …, 19 แล้วแถวล่างสุดซ้ำ 19 อีกครั้ง<br>3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 19 = <b>118</b> จุด<br><span class="ans">ตอบ 6, 13, 22, 33 และ 118 จุด</span>`});
+
+/* ---------- ข้อ 4 ---------- */
+const cubeN=(n,c=F.cube)=>{const a=[];for(let z=0;z<n;z++)for(let x=0;x<n;x++)for(let y=0;y<n;y++)a.push({x,y,z,c});return a};
+P.push({id:'4.1',sec:'5.3',grp:'ข้อ 4',name:'1) ลูกบาศก์',d3:1,page:138,
+  q:`รูปที่ 11 มีลูกบาศก์ ${chip(F.cube)} กี่ลูก (แสดงวิธีคิด)`,
+  steps:[
+    {t:'อ่านโจทย์ ดูรูปที่ 1–4',stage:()=>row([1,2,3,4].map(n=>({m:iso(cubeN(n)),label:`รูปที่ ${n}`})),{maxH:200}),x:`<p>รูปที่ 11 มีลูกบาศก์กี่ลูก</p><p class="tip">💡 นับทีละลูกยาก ให้แยกเป็นชั้น ๆ แล้วนับทีละชั้น</p>`},
+    {t:'แยกรูปออกเป็นชั้น ๆ',stage:()=>three({items:cubeN(3),explode:.9,label:'รูปที่ 3 แยกเป็นชั้น'}),x:`แยกรูปที่ 3 ออกเป็นชั้น จะได้ <b>3 ชั้น</b><br>แต่ละชั้นเป็นสี่เหลี่ยมจัตุรัส <b>3 × 3 = 9</b> ลูก<br>รวม 3 × 9 = <b>27</b> ลูก`},
+    {t:'นับทุกรูปด้วยวิธีเดียวกัน',stage:()=>row([1,2,3,4].map(n=>({m:iso(cubeN(n),.45),label:`รูปที่ ${n}`,sub:[[`${n} ชั้น`,C.blue],ink(' × '),[`${n*n} ลูก`,C.red]]})),{maxH:240})+
+      tbl(['รูปที่','จำนวนชั้น','ชั้นละ (ลูก)','รวม (ลูก)'],[1,2,3,4].map(n=>[n,n,`${n} × ${n} = ${n*n}`,`${n} × ${n*n} = ${n**3}`])),
+      x:`รูปที่ 1 มี 1 ลูก<br>รูปที่ 2 มี 2 ชั้น ชั้นละ 2 × 2 = 4 ลูก รวม 2 × 4 = 8 ลูก<br>รูปที่ 3 มี 3 ชั้น ชั้นละ 3 × 3 = 9 ลูก รวม 3 × 9 = 27 ลูก<br>รูปที่ 4 มี 4 ชั้น ชั้นละ 4 × 4 = 16 ลูก รวม 4 × 16 = 64 ลูก`},
+    {t:'หาความสัมพันธ์',stage:()=>tbl(['รูปที่','จำนวนชั้น','ชั้นละ (ลูก)','รวม (ลูก)'],[...[1,2,3,4].map(n=>[n,n,`${n} × ${n}`,`${n} × ${n} × ${n}`]),['11','11','11 × 11','?']],{hl:4}),
+      x:`<b>จำนวนชั้น</b> เท่ากับลำดับที่ของรูป<br>แต่ละชั้นมีลูกบาศก์ <b>(ลำดับที่ × ลำดับที่)</b> ลูก<br>ดังนั้น รูปที่ 11 มี 11 ชั้น ชั้นละ 11 × 11 ลูก`},
+    {t:'หาคำตอบ: รูปที่ 11',stage:()=>three({items:cubeN(11),label:'รูปที่ 11 (ซ้อนทีละชั้น)',step:.3}),
+      x:`รูปที่ 11 มี 11 ชั้น ชั้นละ 11 × 11 = <b>121</b> ลูก<br>แสดงว่ามีลูกบาศก์ทั้งหมด 11 × 121 = <b>1,331</b> ลูก<br><span class="ans">ตอบ 1,331 ลูก</span>`}],
+  try:{label:'รูปที่',min:1,max:12,init:5,render:n=>({stage:three({items:cubeN(n),explode:.3,label:`รูปที่ ${n}`}),info:`รูปที่ ${n} มี ${n} ชั้น ชั้นละ ${n} × ${n} = ${n*n} ลูก<br>รวม ${n} × ${n*n} = <b>${fmt(n**3)}</b> ลูก`})}});
+
+pattern({id:'4.2',sec:'5.3',grp:'ข้อ 4',name:'2) รูปตัว T',page:139,ask:8,tryMax:12,chip:chip(F.tgreen),
+  q:`รูปที่ 8 มี ${chip(F.tgreen)} กี่รูป (แสดงวิธีคิด)`,
+  fig(n,hl){const A=[],V=[],L=[],R=[];for(let y=0;y<n;y++){A.push(sqU(0,y,F.tgreen));V.push([0,y])}
+    for(let k=1;k<n;k++){A.push(sqU(-k,0,F.tgreen),sqU(k,0,F.tgreen));L.push([-k,0]);R.push([k,0])}
+    if(!hl)return A;const O=[outU(V,C.red)];if(n>1)O.push(outU(L,C.green),outU(R,C.green));return A.concat(O)},
+  count:n=>3*n-2,segs:n=>n===1?[['1',C.red]]:[[`${n}`,C.red],ink(' + '),[`(2 × ${n-1})`,C.green]],
+  split:`แยกเป็น <b style="color:${C.red}">แนวตั้ง</b> (กรอบแดง) กับ <b style="color:${C.green}">แนวนอน</b> (กรอบเขียว ซ้าย–ขวา)<br>• แนวตั้งมีจำนวนเท่ากับลำดับที่ของรูป<br>• แนวนอนมี 2 ข้าง ข้างละ (ลำดับที่ − 1) รูป`,
+  tbl:{head:['รูปที่','แนวตั้ง','แนวนอน','รวม'],row:n=>n===1?[1,'-','-',1]:[n,n,`2 × ${n-1} = ${2*(n-1)}`,`${n} + ${2*(n-1)} = ${3*n-2}`]},
+  rel:`จำนวนแนวตั้ง = ลำดับที่ของรูป<br>จำนวนแนวนอน = 2 × (ลำดับที่ − 1)`,
+  final:n=>`รูปที่ 8 แนวตั้งมี ${chip(F.tgreen)} <b>8</b> รูป และแนวนอนมี 2 × 7 = <b>14</b> รูป<br>ดังนั้น รูปที่ 8 มี 8 + 14 = <b>22</b> รูป<br><span class="ans">ตอบ 22 รูป</span>`});
+
+pattern({id:'4.3',sec:'5.3',grp:'ข้อ 4',name:'3) รูปประตู',page:140,ask:15,tryMax:15,chip:chip(F.pink),
+  q:`รูปที่ 15 มี ${chip(F.pink)} กี่รูป (แสดงวิธีคิด)`,
+  fig(n,hl){const A=[],L=[],R=[],T=[];for(let y=0;y<=n;y++){A.push(sqU(0,y,F.pink),sqU(n+1,y,F.pink));L.push([0,y]);R.push([n+1,y])}
+    for(let x=1;x<=n;x++){A.push(sqU(x,n,F.pink));T.push([x,n])}return hl?A.concat([outU(L,C.red),outU(R,C.red),outU(T,C.blue)]):A},
+  count:n=>2*(n+1)+n,segs:n=>[[`(2 × ${n+1})`,C.red],ink(' + '),[`${n}`,C.blue]],
+  split:`• <b style="color:${C.red}">แนวตั้ง</b> (เสา 2 ข้าง) ข้างละ (ลำดับที่ + 1) รูป<br>• <b style="color:${C.blue}">แนวนอน</b> (คานด้านบน ไม่นับมุม) มีจำนวนเท่ากับลำดับที่ของรูป`,
+  tbl:{head:['รูปที่','แนวตั้ง','แนวนอน','รวม'],row:n=>[n,`2 × ${n+1} = ${2*(n+1)}`,n,`${2*(n+1)} + ${n} = ${3*n+2}`]},
+  rel:`จำนวนแนวตั้ง = 2 × (ลำดับที่ + 1)<br>จำนวนแนวนอน = ลำดับที่ของรูป`,
+  final:n=>`รูปที่ 15 แนวตั้งมี 2 × 16 = <b>32</b> รูป และแนวนอนมี <b>15</b> รูป<br>ดังนั้น รูปที่ 15 มี 32 + 15 = <b>47</b> รูป<br><span class="ans">ตอบ 47 รูป</span>`});
+
+const circU=(x,y,fill)=>({t:'circ',x:x+.5,y:-y-.5,r:.46,fill,u:1});
+pattern({id:'4.4',sec:'5.3',grp:'ข้อ 4',name:'4) กระดุมหวาน',page:141,ask:7,tryMax:9,unit:'เม็ด',
+  q:`หวานเรียงกระดุม ${chip(F.yellow,1)} และ ${chip(F.bpurple,1)} ดังรูป รูปที่ 7 หวานต้องใช้กระดุม ${chip(F.yellow,1)} และ ${chip(F.bpurple,1)} รวมกันกี่เม็ด`,
+  fig(n,hl){const A=[],B1=[],B2=[];for(let x=0;x<=n;x++)for(let y=0;y<n;y++){A.push(circU(x,y,F.bpurple));B1.push([x,y])}
+    for(let x=n+1;x<=2*n;x++)for(let y=n;y<=2*n;y++){A.push(circU(x,y,F.bpurple));B2.push([x,y])}
+    const Y=[[0,n],[n+1,n-1],[n,2*n]];Y.forEach(([x,y])=>A.push(circU(x,y,F.yellow)));
+    if(hl){A.push(outU(B1,C.red),outU(B2,C.red));Y.forEach(([x,y])=>A.push({t:'ring',x:x+.5,y:-y-.5,r:.55,c:C.green}))}return A},
+  count:n=>3+2*n*(n+1),segs:n=>[['3',C.green],ink(' + '),[`2 × (${n} × ${n+1})`,C.purple]],
+  diff:`รูปที่ 1 ถึงรูปที่ 4 ใช้ 7, 15, 27, 43 เม็ด<br>${chip(F.yellow,1)} มี 3 เม็ดทุกรูป ส่วน ${chip(F.bpurple,1)} เพิ่มขึ้นไม่เท่ากัน (4, 12, 24, 40)`,
+  split:`• ${chip(F.yellow,1)} (<b style="color:${C.green}">วงเขียว</b>) มี 3 เม็ดเสมอ<br>• ${chip(F.bpurple,1)} แบ่งเป็น 2 กลุ่มเท่ากัน (<b style="color:${C.red}">กรอบแดง</b>) แต่ละกลุ่มเป็นสี่เหลี่ยมผืนผ้า มี (ลำดับที่) แถว แถวละ (ลำดับที่ + 1) เม็ด`,
+  tbl:{head:['รูปที่','● เหลือง','● ม่วง','รวม'],row:n=>[n,3,`2 × (${n} × ${n+1}) = ${2*n*(n+1)}`,`3 + ${2*n*(n+1)} = ${3+2*n*(n+1)}`]},
+  rel:`กระดุมเหลือง = 3 เม็ด<br>กระดุมม่วง = 2 × (ลำดับที่ × (ลำดับที่ + 1))`,
+  final:n=>`รูปที่ 7 มีกระดุม ${chip(F.yellow,1)} <b>3</b> เม็ด และกระดุม ${chip(F.bpurple,1)} 2 × (7 × 8) = <b>112</b> เม็ด<br>ดังนั้น รูปที่ 7 หวานต้องใช้กระดุมรวมกัน 3 + 112 = <b>115</b> เม็ด<br><span class="ans">ตอบ 115 เม็ด</span>`});
+
+pattern({id:'4.5',sec:'5.3',grp:'ข้อ 4',name:'5) บล็อกปูพื้น',page:142,ask:10,tryMax:12,unit:'ก้อน',multi:true,
+  q:`สมศักดิ์เรียงบล็อกปูพื้นดังรูป รูปที่ 10 สมศักดิ์ต้องใช้บล็อก <span style="color:#5a6fc0">⬢ สีฟ้า</span> และ <span style="color:#e0702a">⬢ สีส้ม</span> อย่างละกี่ก้อน`,
+  fig(n,hl){const r=.58,A=[],col=(c,ys,fill,st)=>ys.forEach((y,j)=>A.push({t:'hex',cx:c*1.5*r,cy:y,r,flat:true,fill,u:1,...st(j,ys.length)}));
+    const none=()=>({}),red=()=>hl?{st:C.red,sw:3}:{},mid=(j,L)=>hl?{st:(j===0||j===L-1)?C.green:C.red,sw:3}:{};
+    const rg=(a,k)=>Array.from({length:k},(_,i)=>a+i);
+    col(0,rg(1,n),F.hblue,red);col(1,rg(.5,n+1),F.horange,none);col(2,rg(0,n+2),F.hblue,mid);col(3,rg(.5,n+1),F.horange,none);col(4,rg(1,n),F.hblue,red);
+    return A.sort((a,b)=>(a.sw||0)-(b.sw||0)).map(p=>p)},
+  count:n=>5*n+4,
+  segs:n=>[[`(3 × ${n}) + 2`,'#4558b0'],ink(' | '),[`2 × (${n} + 1)`,'#d0601a']],
+  eq:n=>[[`ฟ้า (3 × ${n}) + 2 = ${3*n+2}`,'#4558b0'],ink('   '),[`ส้ม 2 × (${n} + 1) = ${2*(n+1)}`,'#d0601a']],
+  cnt:n=>[[`ฟ้า ${3*n+2}`,'#4558b0'],ink('  '),[`ส้ม ${2*(n+1)}`,'#d0601a']],
+  diff:`บล็อกสีฟ้า: 5, 8, 11, 14 → เพิ่มทีละ 3 ก้อน<br>บล็อกสีส้ม: 4, 6, 8, 10 → เพิ่มทีละ 2 ก้อน`,
+  split:`มองเป็นแนวตั้ง 5 แถว<br>• สีฟ้า: <b style="color:${C.red}">กรอบแดง</b> มี 3 แถว แถวละเท่ากับลำดับที่ของรูป และมี<b style="color:${C.green}">กรอบเขียว</b>บน–ล่าง อีก 2 ก้อนเสมอ<br>• สีส้ม: มี 2 แถว แถวละ (ลำดับที่ + 1) ก้อน`,
+  tbl:{head:['รูปที่','⬢ ฟ้า (ก้อน)','⬢ ส้ม (ก้อน)'],row:n=>[n,`(3 × ${n}) + 2 = ${3*n+2}`,`2 × (${n} + 1) = ${2*(n+1)}`]},
+  rel:`บล็อกสีฟ้า = (3 × ลำดับที่) + 2<br>บล็อกสีส้ม = 2 × (ลำดับที่ + 1)`,
+  final:n=>`รูปที่ 10 มีบล็อกสีฟ้า (3 × 10) + 2 = <b>32</b> ก้อน<br>และบล็อกสีส้ม 2 × (10 + 1) = <b>22</b> ก้อน<br><span class="ans">ตอบ บล็อกสีฟ้า 32 ก้อน และบล็อกสีส้ม 22 ก้อน</span>`});
+
+/* 4.6 ขนมลูกเต๋า */
+const pyr=n=>{const a=[];for(let k=1;k<=n;k++)for(let x=-(k-1);x<=k-1;x++)for(let y=-(k-1);y<=k-1;y++)if(Math.abs(x)+Math.abs(y)<=k-1)a.push({x,y,z:n-k,c:F.caramel});return a};
+const layerTop=k=>{const A=[];for(let x=-(k-1);x<=k-1;x++)for(let y=-(k-1);y<=k-1;y++){const inD=Math.abs(x)+Math.abs(y)<=k-1,g=(((x+y+k-1)%2)+2)%2===0;
+  A.push({t:'sq',x,y,fill:inD?(g?'#3cb371':'#f08a3c'):'#fff',st:inD?'#2b2b2b':'#bbb',u:inD?1:0})}return A};
+const lsum=k=>k*k+(k-1)*(k-1);
+P.push({id:'4.6',sec:'5.3',grp:'ข้อ 4',name:'6) ขนมลูกเต๋า',d3:1,page:143,
+  q:`กิ้งเรียงขนมลูกเต๋าดังรูป รูปที่ 6 ใช้ขนมลูกเต๋ากี่ลูก (แสดงวิธีคิด)`,
+  steps:[
+    {t:'อ่านโจทย์ ดูรูปที่ 1–4',stage:()=>row([1,2,3,4].map(n=>({m:iso(pyr(n)),label:`รูปที่ ${n}`})),{maxH:190}),x:`<p>รูปที่ 6 ใช้ขนมลูกเต๋ากี่ลูก</p><p class="tip">💡 ขนมซ้อนเป็นชั้น ๆ ให้แยกนับทีละชั้น</p>`},
+    {t:'แยกรูปออกเป็นชั้น ๆ',stage:()=>three({items:pyr(3),explode:1.1,label:'รูปที่ 3 แยกเป็นชั้น'}),x:`แยกรูปที่ 3 ออกเป็น <b>3 ชั้น</b> นับจากบนลงล่าง<br>ชั้นที่ 1 มี 1 ลูก · ชั้นที่ 2 มี 5 ลูก · ชั้นที่ 3 มี 13 ลูก<br>รวม 1 + 5 + 13 = <b>19</b> ลูก`},
+    {t:'มองแต่ละชั้นจากด้านบน',stage:()=>row([1,2,3,4].map(k=>({m:layerTop(k),label:`ชั้นที่ ${k}`,sub:k===1?[['1 × 1 = 1','#1f8a4c']]:[[`(${k} × ${k})`,'#1f8a4c'],ink(' + '),[`(${k-1} × ${k-1})`,'#d0601a'],ink(` = ${lsum(k)}`)]})),{maxH:200}),
+      x:`ระบายสีสลับเหมือนตารางหมากรุก<br>• สี<b style="color:#1f8a4c">เขียว</b>เรียงเป็นสี่เหลี่ยมจัตุรัสเอียง ด้านละเท่ากับเลขชั้น<br>• สี<b style="color:#d0601a">ส้ม</b>เป็นสี่เหลี่ยมจัตุรัสที่เล็กกว่า 1<br>ชั้นที่ 3 = (3 × 3) + (2 × 2) = 13 ลูก · ชั้นที่ 4 = (4 × 4) + (3 × 3) = 25 ลูก`},
+    {t:'รวมจำนวนทุกชั้นของแต่ละรูป',stage:()=>tbl(['รูปที่','จำนวนชั้น','ขนมแต่ละชั้น','รวม (ลูก)'],[1,2,3,4].map(n=>{const l=Array.from({length:n},(_,i)=>lsum(i+1));return [n,n,l.join(', '),`${l.join(' + ')} = ${l.reduce((a,b)=>a+b)}`]})),
+      x:`รูปที่ 1 มี 1 ชั้น รวม 1 ลูก<br>รูปที่ 2 มี 2 ชั้น รวม 1 + 5 = 6 ลูก<br>รูปที่ 3 มี 3 ชั้น รวม 1 + 5 + 13 = 19 ลูก<br>รูปที่ 4 มี 4 ชั้น รวม 1 + 5 + 13 + 25 = 44 ลูก`},
+    {t:'หาคำตอบ: รูปที่ 6',stage:()=>three({items:pyr(6),label:'รูปที่ 6 (ซ้อนทีละชั้น)'})+row([5,6].map(k=>({m:layerTop(k),label:`ชั้นที่ ${k}`,sub:[[`(${k} × ${k})`,'#1f8a4c'],ink(' + '),[`(${k-1} × ${k-1})`,'#d0601a'],ink(` = ${lsum(k)}`)]})),{maxH:170}),
+      x:`รูปที่ 6 มี 6 ชั้น: ชั้นที่ 1 มี 1 ลูก ชั้นที่ 2 มี 5 ลูก ชั้นที่ 3 มี 13 ลูก ชั้นที่ 4 มี 25 ลูก<br>ชั้นที่ 5 มี (5 × 5) + (4 × 4) = <b>41</b> ลูก · ชั้นที่ 6 มี (6 × 6) + (5 × 5) = <b>61</b> ลูก<br>ดังนั้น รูปที่ 6 ใช้ขนม 1 + 5 + 13 + 25 + 41 + 61 = <b>146</b> ลูก<br><span class="ans">ตอบ 146 ลูก</span>`}],
+  try:{label:'รูปที่',min:1,max:10,init:5,render:n=>{const l=Array.from({length:n},(_,i)=>lsum(i+1));return {stage:three({items:pyr(n),explode:.25,label:`รูปที่ ${n}`}),info:`รูปที่ ${n} มี ${n} ชั้น ขนมแต่ละชั้น (บนลงล่าง): ${l.join(', ')}<br>รวม ${l.join(' + ')} = <b>${fmt(l.reduce((a,b)=>a+b))}</b> ลูก`}}}});
+
+/* ---------- แบบฝึกหัด 5.4 ---------- */
+// ข้อ 1 กระเบื้อง
+function floor(N,o={}){const A=[];for(let x=0;x<N;x++)for(let y=0;y<N;y++){const k=Math.max(x,y)+1,yel=k%2===1;
+  const fade=(o.emph==='y'&&!yel)||(o.emph==='g'&&yel);A.push(sqU(x,y,yel?'#ffe94a':'#2eaf5d',{op:fade?.18:1}))}
+  if(o.labels!==false)for(let k=1;k<=N;k++){const fade=(o.emph==='y'&&k%2===0)||(o.emph==='g'&&k%2===1);if(!fade)A.push(txt(k-.5,-(k-.5),k,k%2?'#7a5b00':'#fff',.5))}
+  return A}
+const odd=k=>2*k-1,rngA=(a,b,s=1)=>{const r=[];for(let i=a;i<=b;i+=s)r.push(i);return r};
+P.push({id:'5.4-1',sec:'5.4',grp:'',name:'1) ปูกระเบื้อง 2 สี',page:144,
+  q:`ต้นออกแบบลวดลายปูพื้นด้วยกระเบื้องรูปสี่เหลี่ยมจัตุรัสยาวด้านละ 20 ซม. ใช้กระเบื้อง 2 สีปูสลับกันเป็นชั้น ๆ ถ้าพื้นห้องเป็นสี่เหลี่ยมจัตุรัสยาวด้านละ 3 เมตร ต้นต้องใช้กระเบื้องสีละกี่แผ่น`,
+  steps:[
+    {t:'อ่านโจทย์ ดูลวดลาย',stage:()=>row([{m:floor(6),label:'ตัวอย่างลวดลาย 6 ชั้น'}],{maxH:280}),x:`ชั้นที่ 1 อยู่มุมซ้ายล่าง แต่ละชั้นถัดไปเป็นรูปตัว L ล้อมชั้นเดิม<br>ชั้นคี่ (1, 3, 5, …) เป็น<b style="color:#b38f00">สีเหลือง</b> ชั้นคู่ (2, 4, 6, …) เป็น<b style="color:#1f8a4c">สีเขียว</b>`},
+    {t:'หาจำนวนชั้น',stage:()=>row([{m:[...floor(15,{labels:false}).map(p=>({...p,fill:'#f5f0e3',op:1})),...rngA(0,14).map(i=>txt(i+.5,.6,20,C.gray,.32))],label:'ด้านละ 15 แผ่น'}],{maxH:300}),
+      x:`พื้นห้องยาวด้านละ 3 เมตร หรือ <b>300 เซนติเมตร</b><br>กระเบื้องยาวแผ่นละ 20 เซนติเมตร<br>จึงปูได้ด้านละ 300 ÷ 20 = <b>15</b> แผ่น แสดงว่าต้องปูกระเบื้อง <b>15 ชั้น</b>`},
+    {t:'นับกระเบื้องในแต่ละชั้น',stage:()=>row([{m:floor(6),label:'ชั้นที่ k มี k + (k − 1) แผ่น'}],{maxH:240})+tbl(['ชั้นที่','สีเหลือง','สีเขียว'],rngA(1,6).map(k=>[k,k%2?(k===1?'1':`${k} + ${k-1} = ${odd(k)}`):'-',k%2?'-':`${k} + ${k-1} = ${odd(k)}`])),
+      x:`ชั้นที่ k เป็นรูปตัว L มีด้านตั้ง k แผ่น และด้านนอน k − 1 แผ่น<br>จึงมี k + (k − 1) แผ่น: 1, 3, 5, 7, 9, 11, … (เพิ่มทีละ 2)`},
+    {t:'ปูให้ครบ 15 ชั้น',stage:()=>row([{m:floor(15),label:'พื้นห้อง 15 × 15 แผ่น'}],{maxH:340}),
+      x:`ถ้าปู 15 ชั้น<br>• สีเหลืองอยู่ชั้นที่ 1, 3, 5, 7, 9, 11, 13 และ 15<br>• สีเขียวอยู่ชั้นที่ 2, 4, 6, 8, 10, 12 และ 14`},
+    {t:'รวมกระเบื้องสีเหลือง',stage:()=>row([{m:floor(15,{emph:'y'}),label:'เฉพาะสีเหลือง'}],{maxH:320})+tbl(['ชั้นที่',...rngA(1,15,2)],[['จำนวน (แผ่น)',...rngA(1,15,2).map(odd)]]),
+      x:`ชั้นที่ 7 มี 7 + 6 = 13 แผ่น ชั้นที่ 9 มี 9 + 8 = 17 แผ่น ชั้นที่ 11 มี 21 แผ่น ชั้นที่ 13 มี 25 แผ่น ชั้นที่ 15 มี 29 แผ่น<br>ใช้กระเบื้องสีเหลือง 1 + 5 + 9 + 13 + 17 + 21 + 25 + 29 = <b>120</b> แผ่น`},
+    {t:'รวมกระเบื้องสีเขียว',stage:()=>row([{m:floor(15,{emph:'g'}),label:'เฉพาะสีเขียว'}],{maxH:320})+tbl(['ชั้นที่',...rngA(2,14,2)],[['จำนวน (แผ่น)',...rngA(2,14,2).map(odd)]]),
+      x:`ชั้นที่ 8 มี 8 + 7 = 15 แผ่น ชั้นที่ 10 มี 19 แผ่น ชั้นที่ 12 มี 23 แผ่น ชั้นที่ 14 มี 27 แผ่น<br>ใช้กระเบื้องสีเขียว 3 + 7 + 11 + 15 + 19 + 23 + 27 = <b>105</b> แผ่น<br>✓ ตรวจ: 120 + 105 = 225 = 15 × 15 แผ่นพอดี<br><span class="ans">ตอบ สีเหลือง 120 แผ่น และสีเขียว 105 แผ่น</span>`}],
+  try:{label:'จำนวนชั้น',min:1,max:20,init:15,render:n=>{const y=rngA(1,n,2).map(odd),g=rngA(2,n,2).map(odd),sy=y.reduce((a,b)=>a+b,0),sg=g.reduce((a,b)=>a+b,0);
+    return {stage:row([{m:floor(n),label:`พื้นด้านละ ${n} แผ่น (ยาว ${fmt(n*20)} ซม.)`}],{maxH:340}),info:`สีเหลือง ${y.join(' + ')} = <b>${sy}</b> แผ่น<br>สีเขียว ${g.length?g.join(' + '):'0'} = <b>${sg}</b> แผ่น<br>รวม ${sy} + ${sg} = ${sy+sg} = ${n} × ${n} แผ่น`}}}});
+
+// ข้อ 2 หมอนขวาน
+const PIL=['#c0392b','#2c3e7a','#1e7f4f','#d4a017','#7a2f8c'];
+function pillows(n,labels){const A=[],h=h3;let c=0;
+  for(let k=1;k<=n;k++){const yt=(k-1)*h,yb=k*h,x0=-k/2;
+    for(let j=0;j<k;j++){const pts=[[x0+j,yb],[x0+j+1,yb],[x0+j+.5,yt]];A.push({t:'poly',pts,fill:PIL[(c++)%5],st:'#4a2f12',sw:1.5,u:1});A.push({t:'poly',pts:[[x0+j+.3,yb-.1],[x0+j+.7,yb-.1],[x0+j+.5,yt+.35]],fill:'#fff',op:.55,st:'none'})}
+    for(let j=0;j<k-1;j++){const pts=[[x0+j+.5,yt],[x0+j+1.5,yt],[x0+j+1,yb]];A.push({t:'poly',pts,fill:PIL[(c++)%5],st:'#4a2f12',sw:1.5,u:1});A.push({t:'poly',pts:[[x0+j+.8,yt+.1],[x0+j+1.2,yt+.1],[x0+j+1,yb-.35]],fill:'#fff',op:.55,st:'none'})}
+    if(labels)A.push(txt(k/2+.35,(k-.5)*h,`${odd(k)} ใบ`,C.red,.42,'start'))}return A}
+P.push({id:'5.4-2',sec:'5.4',grp:'',name:'2) หมอนขวาน',page:145,
+  q:`ร้าน OTOP จัดเรียงหมอนขวานเป็นชั้น ๆ ดังรูป<br>1) ถ้าต้องการเรียง 8 ชั้น จะต้องใช้หมอนขวานกี่ใบ<br>2) ถ้าทางร้านมีหมอนขวาน 100 ใบ จะเรียงได้ทั้งหมดกี่ชั้น และชั้นล่างสุดมีกี่ใบ`,
+  steps:[
+    {t:'อ่านโจทย์ ดูรูป 1–4 ชั้น',stage:()=>row([1,2,3,4].map(n=>({m:pillows(n),label:`${n} ชั้น`})),{maxH:200}),x:`หมอนขวานเรียงเป็นรูปสามเหลี่ยม ชั้นบนสุดมี 1 ใบ<br><span class="tip">💡 นับจำนวนหมอนทีละชั้นจากบนลงล่าง</span>`},
+    {t:'นับหมอนในแต่ละชั้น',stage:()=>row([{m:pillows(4,true),label:'เรียง 4 ชั้น'}],{maxH:260}),x:`ชั้นที่ 1 มี 1 ใบ ชั้นที่ 2 มี 3 ใบ ชั้นที่ 3 มี 5 ใบ ชั้นที่ 4 มี 7 ใบ<br>→ ชั้นถัดลงมาเพิ่มขึ้นทีละ <b>2 ใบ</b>`},
+    {t:'รวมจำนวนหมอนตามจำนวนชั้น',stage:()=>tbl(['จำนวนชั้น','หมอนแต่ละชั้น (ใบ)','รวม (ใบ)'],rngA(1,4).map(n=>[n,rngA(1,n).map(odd).join(', '),`${rngA(1,n).map(odd).join(' + ')} = ${n*n}`])),
+      x:`เรียง 1 ชั้น ใช้ 1 ใบ · 2 ชั้น ใช้ 1 + 3 = 4 ใบ<br>3 ชั้น ใช้ 1 + 3 + 5 = 9 ใบ · 4 ชั้น ใช้ 1 + 3 + 5 + 7 = 16 ใบ<br><span class="tip">ข้อสังเกต: ผลรวมคือ 1 × 1, 2 × 2, 3 × 3, 4 × 4 พอดี</span>`},
+    {t:'ข้อ 1) เรียง 8 ชั้น',stage:()=>row([{m:pillows(8,true),label:'เรียง 8 ชั้น'}],{maxH:340}),
+      x:`ชั้นที่ 5 ถึง 8 มี 9, 11, 13, 15 ใบ<br>ถ้าต้องการเรียง 8 ชั้น ต้องใช้หมอนขวาน 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = <b>64</b> ใบ<br><span class="ans">ตอบ ข้อ 1) 64 ใบ</span>`},
+    {t:'ข้อ 2) มีหมอน 100 ใบ',stage:()=>row([{m:pillows(10,true),label:'เรียง 10 ชั้น'}],{maxH:360})+tbl(['จำนวนชั้น','รวม (ใบ)'],[[8,64],[9,'64 + 17 = 81'],[10,'81 + 19 = 100']],{hl:2}),
+      x:`เรียง 9 ชั้น ใช้ 1 + 3 + … + 17 = 81 ใบ (ยังเหลือ)<br>เรียง 10 ชั้น ใช้ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 = <b>100</b> ใบ พอดี<br>ชั้นล่างสุด (ชั้นที่ 10) มีหมอนขวาน <b>19</b> ใบ<br><span class="ans">ตอบ ข้อ 2) เรียงได้ 10 ชั้น และชั้นล่างสุดมี 19 ใบ</span>`}],
+  try:{label:'จำนวนชั้น',min:1,max:15,init:8,render:n=>{const l=rngA(1,n).map(odd);return {stage:row([{m:pillows(n,true),label:`เรียง ${n} ชั้น`}],{maxH:360}),info:`หมอนแต่ละชั้น: ${l.join(', ')}<br>รวม ${l.join(' + ')} = <b>${n*n}</b> ใบ (= ${n} × ${n}) · ชั้นล่างสุดมี ${odd(n)} ใบ`}}}});
+
+// ข้อ 3 เงินเดือน
+function salaryChart(N){const W=900,base=150,top=40,bw=Math.min(70,(W-60)/N-14),bh=N>1?Math.min(22,170/(N-1)):22,gy=top+170+base;let s='';
+  for(let i=1;i<=N;i++){const x=40+(i-1)*(bw+14),r=i-1,yb=gy-base;
+    s+=`<rect x="${x}" y="${yb}" width="${bw}" height="${base}" fill="#9fc0e0" stroke="#5b7fa6"/>`;
+    if(bw>44)s+=`<text x="${x+bw/2}" y="${yb+base/2}" text-anchor="middle" font-size="14" fill="#2c4a6b" transform="rotate(-90 ${x+bw/2} ${yb+base/2})">9,000</text>`;
+    for(let j=0;j<r;j++)s+=`<rect x="${x}" y="${yb-(j+1)*bh}" width="${bw}" height="${bh}" fill="#f4a62a" stroke="#b86e00"/>`;
+    s+=`<text x="${x+bw/2}" y="${yb-r*bh-8}" text-anchor="middle" font-size="${bw>50?16:12}" font-weight="700" fill="${i===N?C.red:C.ink}">${fmt(9000+250*r)}</text>`;
+    s+=`<text x="${x+bw/2}" y="${gy+22}" text-anchor="middle" font-size="16">ปีที่ ${i}</text>`}
+  const Wt=40+N*(bw+14)+20;
+  return `<svg class="fig" viewBox="0 0 ${Math.max(Wt,420)} ${gy+60}" style="max-width:${Math.max(Wt,420)}px"><line x1="30" y1="${gy}" x2="${Wt}" y2="${gy}" stroke="#333"/>${s}<rect x="40" y="${gy+34}" width="16" height="12" fill="#9fc0e0" stroke="#5b7fa6"/><text x="62" y="${gy+45}" font-size="14">เงินเดือนปีแรก 9,000</text><rect x="210" y="${gy+34}" width="16" height="12" fill="#f4a62a" stroke="#b86e00"/><text x="232" y="${gy+45}" font-size="14">ขึ้นครั้งละ 250</text></svg>`}
+const salRows=N=>rngA(1,N).map(n=>[n,n===1?'9,000':`9,000 + (${n-1} × 250)`,fmt(9000+250*(n-1))]);
+P.push({id:'5.4-3',sec:'5.4',grp:'',name:'3) เงินเดือนจรัญ',page:146,
+  q:`จรัญได้รับเงินเดือนเดือนละ 9,000 บาท และบริษัทปรับเงินเดือนขึ้นทุกปี ปีละ 250 บาท ในปีที่ 7 จรัญจะได้เงินเดือนเดือนละเท่าใด`,
+  steps:[
+    {t:'อ่านโจทย์',stage:()=>`<div class="cards"><div class="card">ปีที่ 1 ได้เดือนละ<b>9,000</b>บาท</div><div class="card">ขึ้นเงินเดือนปีละ<b>250</b>บาท</div><div class="card">ปีที่ 7 ได้เดือนละ<b>?</b>บาท</div></div>`,x:`<p class="tip">💡 ไล่ดูทีละปีว่าเงินเดือนขึ้นไปกี่ครั้งแล้ว</p>`},
+    {t:'ดูปีที่ 1 ถึงปีที่ 4',stage:()=>salaryChart(4)+tbl(['ปีที่','เงินเดือน (บาท)','รวม'],salRows(4)),
+      x:`ปีที่ 1 ได้ 9,000 บาท<br>ปีที่ 2 ได้ 9,000 + 250 = 9,000 + (1 × 250) บาท<br>ปีที่ 3 ได้ 9,000 + 250 + 250 = 9,000 + (2 × 250) บาท<br>ปีที่ 4 ได้ 9,000 + 250 + 250 + 250 = 9,000 + (3 × 250) บาท`},
+    {t:'หาความสัมพันธ์',stage:()=>salaryChart(4),x:`เงินเดือนขึ้นครั้งแรกในปีที่ 2 ดังนั้น<br>ปีที่ 2 ขึ้นมาแล้ว 1 ครั้ง ปีที่ 3 ขึ้น 2 ครั้ง ปีที่ 4 ขึ้น 3 ครั้ง<br>→ จำนวนครั้งที่ขึ้น <b>น้อยกว่าลำดับที่ของปีอยู่ 1</b> แสดงว่าปีที่ 7 ขึ้นมาแล้ว 6 ครั้ง`},
+    {t:'หาคำตอบ: ปีที่ 7',stage:()=>salaryChart(7)+tbl(['ปีที่','เงินเดือน (บาท)','รวม'],salRows(7),{hl:6}),
+      x:`ปีที่ 7 จรัญได้เงินเดือนเดือนละ 9,000 + (6 × 250) = 9,000 + 1,500 = <b>10,500</b> บาท<br><span class="ans">ตอบ 10,500 บาท</span>`}],
+  try:{label:'ปีที่',min:1,max:15,init:7,render:n=>({stage:salaryChart(n),info:`ปีที่ ${n} เงินเดือนขึ้นมาแล้ว ${n-1} ครั้ง<br>ได้เงินเดือนเดือนละ 9,000 + (${n-1} × 250) = <b>${fmt(9000+250*(n-1))}</b> บาท`})}});
+
+// ข้อ 4 ขนมน้ำดอกไม้
+const DCOL=['#f7d038','#62cdd6','#f07aa6','#8ccf4d','#b38be0','#f5a35a','#6fa8ff','#f26b6b','#5fd3a0','#d3a35f'];
+const donut=L=>{const a=[];for(let k=1;k<=L;k++)for(let i=0;i<=k;i++)for(let j=0;j<k;j++)a.push({x:i-k/2,y:j-(k-1)/2,z:L-k,c:DCOL[(k-1)%10]});return a};
+const dTop=k=>{const A=[];for(let i=0;i<=k;i++)for(let j=0;j<k;j++)A.push({t:'circ',x:i,y:j,r:.42,fill:DCOL[(k-1)%10],u:1},{t:'circ',x:i,y:j,r:.14,fill:'#fff'});return A};
+const dSum=L=>rngA(1,L).map(k=>k*(k+1));
+P.push({id:'5.4-4',sec:'5.4',grp:'',name:'4) ขนมน้ำดอกไม้',d3:1,page:146,
+  q:`แม่เรียงขนมน้ำดอกไม้ใส่ถาดเป็นชั้น ๆ ดังรูป ถาดละ 6 ชั้น จำนวน 3 ถาด แม่เรียงขนมใส่ถาดทั้งหมดกี่ชิ้น`,
+  steps:[
+    {t:'อ่านโจทย์ ดูการเรียงขนม',stage:()=>three({items:donut(4),kind:'torus',dz:.4,plate:true,label:'ตัวอย่างในหนังสือ: 4 ชั้น'}),x:`ภาพตัวอย่างเรียง 4 ชั้น ชั้นบนสุดคือชั้นที่ 1<br>แต่โจทย์ให้เรียง<b>ถาดละ 6 ชั้น</b> จำนวน <b>3 ถาด</b>`},
+    {t:'นับขนมในแต่ละชั้น',stage:()=>row(rngA(1,4).map(k=>({m:dTop(k),label:`ชั้นที่ ${k}`,sub:[[`${k} × ${k+1} = ${k*(k+1)}`,C.pink]]})),{maxH:170}),
+      x:`มองจากด้านบน<br>ชั้นที่ 1 มี 1 แถว แถวละ 2 ชิ้น → 1 × 2 = 2 ชิ้น<br>ชั้นที่ 2 มี 2 แถว แถวละ 3 ชิ้น → 2 × 3 = 6 ชิ้น<br>ชั้นที่ 3 มี 3 × 4 = 12 ชิ้น · ชั้นที่ 4 มี 4 × 5 = 20 ชิ้น`},
+    {t:'ชั้นที่ 5 และชั้นที่ 6',stage:()=>row([5,6].map(k=>({m:dTop(k),label:`ชั้นที่ ${k}`,sub:[[`${k} × ${k+1} = ${k*(k+1)}`,C.pink]]})),{maxH:200}),
+      x:`ชั้นที่ k มี k แถว แถวละ (k + 1) ชิ้น<br>ชั้นที่ 5 มีขนม 5 × 6 = <b>30</b> ชิ้น<br>ชั้นที่ 6 มีขนม 6 × 7 = <b>42</b> ชิ้น`},
+    {t:'รวมขนม 1 ถาด (6 ชั้น)',stage:()=>three({items:donut(6),kind:'torus',dz:.4,plate:true,label:'1 ถาด 6 ชั้น',step:.45})+tbl(['ชั้นที่',1,2,3,4,5,6,'รวม'],[['ขนม (ชิ้น)',...dSum(6),'<b>112</b>']]),
+      x:`ใน 1 ถาด มีขนม 2 + 6 + 12 + 20 + 30 + 42 = <b>112</b> ชิ้น`},
+    {t:'หาคำตอบ: 3 ถาด',stage:()=>`<div class="cards"><div class="card">ถาดที่ 1<b>112</b>ชิ้น</div><div class="card">ถาดที่ 2<b>112</b>ชิ้น</div><div class="card">ถาดที่ 3<b>112</b>ชิ้น</div></div><div class="formula">3 × 112 = 336 ชิ้น</div>`,
+      x:`มี 3 ถาด ถาดละ 112 ชิ้น<br>ดังนั้น แม่เรียงขนมใส่ถาดทั้งหมด 3 × 112 = <b>336</b> ชิ้น<br><span class="ans">ตอบ 336 ชิ้น</span>`}],
+  try:{label:'จำนวนชั้น',min:1,max:10,init:6,render:n=>{const l=dSum(n),s=l.reduce((a,b)=>a+b,0);return {stage:three({items:donut(n),kind:'torus',dz:.4,plate:true,label:`1 ถาด ${n} ชั้น`}),info:`ขนมแต่ละชั้น: ${l.join(', ')}<br>1 ถาดมี ${l.join(' + ')} = <b>${fmt(s)}</b> ชิ้น · 3 ถาดมี 3 × ${fmt(s)} = <b>${fmt(3*s)}</b> ชิ้น`}}}});
+
+// ข้อ 5 จักรยาน
+const GOAL=1490,own=w=>35*w,mom=w=>15*w*(w+1)/2,tot=w=>own(w)+mom(w);
+function bikeChart(N){const W=900,ph=260,top=40,max=1700,sc=ph/max,bw=Math.min(54,(W-80)/Math.max(N,6)-10),gy=top+ph;let s='';
+  const gyL=gy-GOAL*sc;
+  for(let w=1;w<=N;w++){const x=60+(w-1)*(bw+10),ho=own(w)*sc,hm=mom(w)*sc,ok=tot(w)>=GOAL;
+    s+=`<rect x="${x}" y="${gy-ho}" width="${bw}" height="${ho}" fill="#5b9bf0" stroke="#2f6bc0"/><rect x="${x}" y="${gy-ho-hm}" width="${bw}" height="${hm}" fill="#f28cc0" stroke="#c0508a"/>`;
+    s+=`<text x="${x+bw/2}" y="${gy-ho-hm-7}" text-anchor="middle" font-size="${bw>40?14:11}" font-weight="700" fill="${ok?C.green:C.ink}">${fmt(tot(w))}${ok?' ✓':''}</text>`;
+    s+=`<text x="${x+bw/2}" y="${gy+20}" text-anchor="middle" font-size="14">${w}</text>`}
+  const Wt=60+Math.max(N,6)*(bw+10)+20;
+  return `<svg class="fig" viewBox="0 0 ${Wt} ${gy+64}" style="max-width:${Wt}px"><line x1="50" y1="${gy}" x2="${Wt}" y2="${gy}" stroke="#333"/>${s}
+  <line x1="50" y1="${gyL}" x2="${Wt}" y2="${gyL}" stroke="${C.red}" stroke-width="2" stroke-dasharray="8 5"/><text x="54" y="${gyL-8}" font-size="15" fill="${C.red}" font-weight="700">ราคาจักรยาน 1,490 บาท</text>
+  <text x="${Wt/2}" y="${gy+40}" text-anchor="middle" font-size="14">สัปดาห์ที่</text>
+  <rect x="60" y="${gy+48}" width="14" height="12" fill="#5b9bf0"/><text x="80" y="${gy+59}" font-size="14">เงินของพิม (สะสม)</text><rect x="230" y="${gy+48}" width="14" height="12" fill="#f28cc0"/><text x="250" y="${gy+59}" font-size="14">เงินของแม่ (สะสม)</text></svg>`}
+const bikeRows=(a,b)=>rngA(a,b).map(w=>[w,35,`${w} × 15 = ${15*w}`,w===1?`35 + (1 × 15) = 50`:`${fmt(tot(w-1))} + 35 + (${w} × 15) = ${fmt(tot(w))}`]);
+const bikeHead=['สัปดาห์ที่','เงินของพิม','เงินของแม่','รวม (บาท)'];
+P.push({id:'5.4-5',sec:'5.4',grp:'',name:'5) เก็บเงินซื้อจักรยาน',page:147,
+  q:`พิมต้องการซื้อจักรยานราคา 1,490 บาท จึงเก็บเงินทุกสัปดาห์ สัปดาห์ละ 35 บาท และแม่จะสมทบให้ สัปดาห์แรก 15 บาท สัปดาห์ที่ 2 ให้ 30 บาท สัปดาห์ที่ 3 ให้ 45 บาท สัปดาห์ที่ 4 ให้ 60 บาท เป็นเช่นนี้ไปเรื่อย ๆ พิมต้องเก็บเงินอย่างน้อยกี่สัปดาห์ จึงจะซื้อจักรยานคันนี้ได้`,
+  steps:[
+    {t:'อ่านโจทย์',stage:()=>`<div class="cards"><div class="card">พิมเก็บสัปดาห์ละ<b>35</b>บาท</div><div class="card">แม่ให้สัปดาห์ที่ k<b>k × 15</b>บาท</div><div class="card">ราคาจักรยาน<b>1,490</b>บาท</div></div>`,
+      x:`เงินของแม่: สัปดาห์ที่ 1 ให้ 15 = 1 × 15, สัปดาห์ที่ 2 ให้ 30 = 2 × 15, สัปดาห์ที่ 3 ให้ 45 = 3 × 15<br><span class="tip">💡 รวมเงินสะสมทีละสัปดาห์ จนถึงหรือเกิน 1,490 บาท</span>`},
+    {t:'สัปดาห์ที่ 1 ถึง 3',stage:()=>bikeChart(3)+tbl(bikeHead,bikeRows(1,3)),
+      x:`สัปดาห์ที่ 1: 35 + (1 × 15) = 50 บาท<br>สัปดาห์ที่ 2: เงินเดิม 50 + 35 + (2 × 15) = 115 บาท<br>สัปดาห์ที่ 3: 115 + 35 + (3 × 15) = 195 บาท`},
+    {t:'สัปดาห์ที่ 4 ถึง 8',stage:()=>bikeChart(8)+tbl(bikeHead,bikeRows(4,8)),
+      x:`ทำแบบเดิม: เงินรวมสัปดาห์ก่อน + 35 + (ลำดับที่สัปดาห์ × 15)<br>สัปดาห์ที่ 8 มีเงินรวม 820 บาท ยังไม่ถึง 1,490 บาท`},
+    {t:'สัปดาห์ที่ 9 ถึง 11',stage:()=>bikeChart(11)+tbl(bikeHead,bikeRows(9,11)),
+      x:`สัปดาห์ที่ 11 มีเงินรวม <b>1,375</b> บาท<br>ยังขาดอีก 1,490 − 1,375 = 115 บาท จึงยังซื้อไม่ได้`},
+    {t:'หาคำตอบ: สัปดาห์ที่ 12',stage:()=>bikeChart(12)+tbl(bikeHead,bikeRows(12,12),{hl:0}),
+      x:`สัปดาห์ที่ 12: 1,375 + 35 + (12 × 15) = <b>1,590</b> บาท ซึ่งมากกว่า 1,490 บาท ✓<br>ดังนั้น พิมต้องเก็บเงินอย่างน้อย 12 สัปดาห์ จึงจะซื้อจักรยานคันนี้ได้<br><span class="ans">ตอบ 12 สัปดาห์</span>`}],
+  try:{label:'สัปดาห์ที่',min:1,max:15,init:12,render:n=>({stage:bikeChart(n),info:`สัปดาห์ที่ ${n}: เงินของพิมสะสม 35 × ${n} = ${fmt(own(n))} บาท · เงินของแม่สะสม ${fmt(mom(n))} บาท<br>รวม <b>${fmt(tot(n))}</b> บาท ${tot(n)>=GOAL?`<b style="color:${C.green}">✓ ซื้อจักรยานได้แล้ว</b>`:`ยังขาดอีก ${fmt(GOAL-tot(n))} บาท`}`})}});
+
+/* ============ หน้าจอ ============ */
+let cur=0,step=0,tab='steps',tn=5,tTimer=null;
+function label(p){return p.sec==='5.3'?`แบบฝึกหัด 5.3 ${p.grp} ${p.name.split(' ')[0]}`:`แบบฝึกหัด 5.4 ข้อ ${p.name.split(')')[0]}`}
+function buildNav(){let h='',last='',lastG='';P.forEach((p,i)=>{if(p.sec!==last){h+=`<h4>แบบฝึกหัด ${p.sec}</h4>`;last=p.sec;lastG=''}
+    if(p.grp&&p.grp!==lastG){h+=`<h5>${p.grp}</h5>`;lastG=p.grp}
+    h+=`<button data-i="${i}">${p.name}${p.d3?'<span class="tag3d">3D</span>':''}</button>`});
+  $('#nav').innerHTML=h;$('#nav').onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i)};
+  $('#psel').innerHTML=P.map((p,i)=>`<option value="${i}">${p.sec} ${p.grp} ${p.name}</option>`).join('');$('#psel').onchange=e=>go(+e.target.value)}
+function go(i,s=0){cur=i;step=s;const p=P[i];tn=p.try.init;history.replaceState(null,'','#'+p.id);
+  document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));$('#psel').value=i;
+  $('#badge').textContent=label(p);$('#page').textContent=`หน้า ${p.page}`;$('#pq').innerHTML=p.q;
+  $('#trytab').textContent=`ลอง${p.try.label.replace('ที่','')}ที่ n`.replace('จำนวนชั้นที่ n','ลองเปลี่ยนจำนวนชั้น').replace('ลองลอง','ลอง');
+  const r=$('#nrange');r.min=p.try.min;r.max=p.try.max;r.value=tn;$('#tlabel').textContent=p.try.label;
+  setTab(tab)}
+function setTab(t){tab=t;document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===t));
+  $('#steps').hidden=t!=='steps';$('#try').hidden=t!=='try';t==='steps'?renderStep():renderTry()}
+function renderStep(){disposeAll();const p=P[cur],st=p.steps[step];
+  $('#dots').innerHTML=p.steps.map((s,i)=>`<button class="${i===step?'on':i<step?'done':''}" data-s="${i}" title="${s.t}">${i+1}</button>`).join('');
+  $('#stitle').textContent=`ขั้นที่ ${step+1} · ${st.t}`;$('#stage').innerHTML=st.stage();$('#explain').innerHTML=st.x;
+  $('#prev').disabled=step===0&&cur===0;$('#prev').textContent=step===0?'◀ ข้อก่อนหน้า':'◀ ย้อนกลับ';
+  const last=step===p.steps.length-1;$('#next').textContent=last?(cur<P.length-1?'ข้อถัดไป ▶':'จบแล้ว ✓'):'ถัดไป ▶';$('#next').disabled=last&&cur===P.length-1;
+  $('#scount').textContent=`${step+1} / ${p.steps.length}`;mountAll($('#stage'))}
+function renderTry(){disposeAll();const p=P[cur],r=p.try.render(tn);$('#nval').textContent=tn;$('#nrange').value=tn;
+  $('#tstage').innerHTML=r.stage;$('#tinfo').innerHTML=r.info;mountAll($('#tstage'))}
+function setN(v){const t=P[cur].try;tn=Math.max(t.min,Math.min(t.max,v));$('#nval').textContent=tn;$('#nrange').value=tn;clearTimeout(tTimer);tTimer=setTimeout(renderTry,120)}
+function next(){const p=P[cur];if(step<p.steps.length-1){step++;renderStep()}else if(cur<P.length-1)go(cur+1)}
+function prev(){if(step>0){step--;renderStep()}else if(cur>0)go(cur-1,P[cur-1].steps.length-1)}
+$('#next').onclick=next;$('#prev').onclick=prev;
+$('#dots').onclick=e=>{const b=e.target.closest('button');if(b){step=+b.dataset.s;renderStep()}};
+document.querySelector('.tabs').onclick=e=>{const b=e.target.closest('button');if(b)setTab(b.dataset.tab)};
+$('#nrange').oninput=e=>setN(+e.target.value);$('#minus').onclick=()=>setN(tn-1);$('#plus').onclick=()=>setN(tn+1);
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
+  if(e.key==='ArrowRight'){tab==='steps'?next():setN(tn+1);e.preventDefault()}
+  if(e.key==='ArrowLeft'){tab==='steps'?prev():setN(tn-1);e.preventDefault()}});
+let wasNarrow=narrow();addEventListener('resize',()=>{if(narrow()!==wasNarrow){wasNarrow=narrow();tab==='steps'?renderStep():renderTry()}});
+buildNav();
+const hi=P.findIndex(p=>'#'+p.id===decodeURIComponent(location.hash));go(hi>=0?hi:0);
+
+/* ตรวจว่าจำนวนในรูปที่วาด ตรงกับสูตร (เปิด console แล้วพิมพ์ __check()) */
+window.__check=()=>{const bad=[];P.filter(p=>p.cfg).forEach(p=>{for(let n=1;n<=10;n++){const got=p.cfg.fig(n,false).filter(q=>q.u).length;if(got!==p.cfg.count(n))bad.push(`${p.id} n=${n}: วาด ${got} สูตร ${p.cfg.count(n)}`)}});return bad.length?bad:'ok'};
+</script>
+</body>
+</html>
